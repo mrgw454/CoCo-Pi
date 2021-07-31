@@ -29,66 +29,28 @@ echo
 
 # add new packages
 #sudo apt install -y <package>
-sudo apt install -y hexchat
-sudo apt install -y libao-dev libdbus-1-dev
-sudo apt install -y qttools5-dev
-sudo apt install -y cmake
-sudo apt install -y qmmp
-sudo apt install -y xdotool wmctrl
-sudo apt install -y gvidm
-sudo apt install -y mesa-utils
-sudo apt install -y python3-png python-png
-sudo apt install -y xclip
 
 # add new programs from source
 
 # check to see if libagar libraries have already been installed
-if [ -e $HOME/source/libagar-installed.txt ]
-then
-	echo libagar library already installed
-	echo
-else
+#if [ -e $HOME/source/libagar-installed.txt ]
+#then
+#	echo libagar library already installed
+#	echo
+#else
 
-	cd $HOME/source/libagar
-	sudo make install
-	touch $HOME/source/libagar-installed.txt
-fi
+#	cd $HOME/source/libagar
+#	sudo make install
+#	touch $HOME/source/libagar-installed.txt
+#fi
 
-echo
-
-# check to see if vgmplay has already been installed
-if [ -e $HOME/source/vgmplay-installed.txt ]
-then
-	echo vgmplay already installed
-	echo
-else
-
-	cd $HOME/source/vgmplay/VGMPlay
-	sudo make install
-	touch $HOME/source/vgmplay-installed.txt
-fi
-
-echo
-
-# check to see if libvgm libraries have already been installed
-if [ -e $HOME/source/libvgm-installed.txt ]
-then
-	echo libvgm library already installed
-	echo
-else
-
-	cd $HOME/source/libvgm/build
-	sudo make install
-	touch $HOME/source/libvgm-installed.txt
-fi
-
-echo
+#echo
 
 # disable "excute" prompt in file manager
-sed -i 's/quick_exec=0/quick_exec=1/' $HOME/.config/libfm/libfm.conf
+#sed -i 's/quick_exec=0/quick_exec=1/' $HOME/.config/libfm/libfm.conf
 
 # remove "&" from web link address
-sed -i 's/\&//' "$HOME/Desktop/pyDriveWire Web UI.desktop"
+#sed -i 's/\&//' "$HOME/Desktop/pyDriveWire Web UI.desktop"
 
 echo
 
@@ -100,4 +62,3 @@ read -p "Press any key to continue... " -n1 -s
 echo
 echo Done!
 echo
-
