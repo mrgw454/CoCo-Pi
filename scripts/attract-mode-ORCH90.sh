@@ -50,9 +50,9 @@ do
 	echo Processing file = "$file"
 	echo
 	echo
-	echo Press [CTRL][C] to BREAK out of ATTRACT mode.
+	echo "Press [CTRL][C] to BREAK out of ATTRACT mode."
 	echo
-	echo Press [F10] to toggle the no throttle option (helps speed things up)
+	echo "Press [F10] to toggle the no throttle option (helps speed things up)."
 	sleep 2
 
 	PROGNAME="$(decb dir $file | grep ' BIN')"

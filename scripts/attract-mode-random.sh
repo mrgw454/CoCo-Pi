@@ -25,7 +25,7 @@ file=$(shuf -ezn 1 /media/share1/software/coco_cart/* | xargs -0 -n1 echo)
      echo
      echo "Press [CTRL][C] to BREAK out of ATTRACT mode."
      echo
-     echo Press [F10] to toggle the no throttle option (helps speed things up)
+     echo "Press [F10] to toggle the no throttle option (helps speed things up)."
      sleep 2
      mame coco2 ${file//+(*\/|.*)} -seconds_to_run 120 $MAMEPARMS
 

@@ -28,7 +28,7 @@ file=$(shuf -ezn 1 $1/* | xargs -0 -n1 echo)
      echo
      echo "Press [CTRL][C] to BREAK out of ATTRACT mode."
      echo
-     echo Press [SHIFT][F12] to toggle the no throttle option (helps speed things up)
+     echo "Press [SHIFT][F12] to toggle the no throttle option (helps speed things up)."
      sleep 2
 
      if [[ $file == *.dsk ]]; then
