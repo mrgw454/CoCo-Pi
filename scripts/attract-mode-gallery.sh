@@ -49,7 +49,7 @@ do
 	set -- $string
 
 	# added -nothrottle option to speed up the loading process
-	mame coco3 -flop1 "$file" -seconds_to_run 120 -autoboot_delay 2 -autoboot_command "LOADM \"$1\":EXEC\n" $MAMEPARMS
+	mame coco3 -ext multi -flop1 "$file" -seconds_to_run 120 -autoboot_delay 2 -autoboot_command "LOADM \"$1\":EXEC\n" $MAMEPARMS
 
 done
 

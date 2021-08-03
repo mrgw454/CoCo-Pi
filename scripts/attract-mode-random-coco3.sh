@@ -42,7 +42,7 @@ file=$(shuf -ezn 1 $1/* | xargs -0 -n1 echo)
 
 		echo Program to run/execute: $program
 		sleep 2
-		mame coco3 -ram 512k -flop1 "$file" -seconds_to_run 120 -autoboot_delay 2 -autoboot_command "RUN \"$program\"\n" $MAMEPARMS
+		mame coco3 -ram 512k -ext multi -flop1 "$file" -seconds_to_run 120 -autoboot_delay 2 -autoboot_command "RUN \"$program\"\n" $MAMEPARMS
 		BAS=1
 
 	fi
@@ -58,7 +58,7 @@ file=$(shuf -ezn 1 $1/* | xargs -0 -n1 echo)
 
 			echo Program to run/execute: $program
 			sleep 2
-			mame coco3 -ram 512k -flop1 "$file" -seconds_to_run 120 -autoboot_delay 2 -autoboot_command "LOADM \"$program\":EXEC\n" $MAMEPARMS
+			mame coco3 -ram 512k -ext multi -flop1 "$file" -seconds_to_run 120 -autoboot_delay 2 -autoboot_command "LOADM \"$program\":EXEC\n" $MAMEPARMS
 
 		fi
 	fi
