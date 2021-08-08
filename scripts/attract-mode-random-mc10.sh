@@ -20,15 +20,16 @@ file=$(shuf -ezn 1 /media/share1/software/mc10/* | xargs -0 -n1 echo)
      echo
      echo
 
-     echo "Random title $run"
-     echo "file = $file"
+     echo "Random program $run"
+     program=$(basename $file)
+     echo "file = $program"
      echo
      echo "Press [CTRL][C] to BREAK out of ATTRACT mode."
      echo
      echo "echo Press [F10] to toggle the no throttle option (helps speed things up)."
      sleep 2
-     mame mc10 -ramsize 20K ${file//+(*\/|.*)} -seconds_to_run 120 $MAMEPARMS
-
+     mame mc10 -ramsize 20K ${program//+(*\/|.*)} -seconds_to_run 120 $MAMEPARMS
+     read -p  "Press any key to continue." -n1 -s
 done
 
 cd $HOME/.mame

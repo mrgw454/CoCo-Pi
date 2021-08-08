@@ -7,10 +7,12 @@
     "4" "Coco 2 XRoar    Attract Mode Carts (random)" \
     "5" "Dragon 32 MAME  Attract Mode Carts (random)" \
     "6" "Dragon 32 XRoar Attract Mode Carts (random)" \
-    "7" "Coco 3 MAME     Image Slideshow (random)" \
-    "8" "Coco 3 MAME     CoCoTracker Demo (random)" \
-    "9" "MAME            Play Donkey Kong Hacks" \
-    "10" "Return to Main Menu" \
+    "7" "MC-10 MAME      Attract Mode Jim Gerrie (random)" \
+    "8" "Coco 3 MAME     Image Slideshow (random)" \
+    "9" "Coco 3 MAME     CoCoTracker Demo (random)" \
+    "10" "Coco Demo       Simultaneous Sessions" \
+    "11" "MAME            Play Donkey Kong Hacks" \
+    "12" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -22,10 +24,12 @@
         4) attract-mode-random-coco2-xroar.sh /media/share1/carts && CoCoPi-menu-Attract.sh;;
         5) attract-mode-random-dragon.sh && CoCoPi-menu-Attract.sh;;
         6) attract-mode-random-dragon-xroar.sh && CoCoPi-menu-Attract.sh;;
-        7) attract-mode-random-coco3.sh /media/share1/RonD/BMP && CoCoPi-menu-Attract.sh;;
-        8) attract-mode-random-ORCH90.sh /media/share1/SDC/MUSIC/MODS && CoCoPi-menu-Attract.sh;;
-        9) attract-mode-dkong.sh && CoCoPi-menu-Attract.sh;;
-       10) menu;;
+        7) attract-mode-random-mc-10-128k.sh /media/share1/JIMG && CoCoPi-menu-Attract.sh;;
+        8) attract-mode-random-coco3.sh /media/share1/RonD/BMP && CoCoPi-menu-Attract.sh;;
+        9) attract-mode-random-ORCH90.sh /media/share1/SDC/MUSIC/MODS && CoCoPi-menu-Attract.sh;;
+       10) demo-mode.sh && CoCoPi-menu-Attract.sh;;
+       11) attract-mode-dkong.sh && CoCoPi-menu-Attract.sh;;
+       12) menu;;
         *) echo "Quitting...";;
     esac
 

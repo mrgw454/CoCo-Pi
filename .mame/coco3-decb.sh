@@ -15,7 +15,7 @@ then
     	read -p  "Press any key to continue." -n1 -s
     	echo
 
-    	mame coco3 -ramsize 512k -ext multi -flop1 "$floppy" $MAMEPARMS > /dev/null
+    	mame coco3 -ramsize 512k -multi -flop1 "$floppy" $MAMEPARMS > /dev/null
 
     else
 
@@ -30,7 +30,7 @@ then
 
 else
 
-    mame coco3 -ramsize 512k -ext multi $MAMEPARMS > /dev/null
+    mame coco3 -ramsize 512k -multi $MAMEPARMS > /dev/null
 
 fi
 
