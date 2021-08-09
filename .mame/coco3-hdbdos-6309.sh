@@ -5,7 +5,7 @@ export MAMEPARMS=$MAMEPARMSFILE
 
 cp $HOME/.mame/cfg/coco3h.cfg.beckerport-enabled $HOME/.mame/cfg/coco3h.cfg
 
-mame coco3h -ramsize 2048k -ext multi -ext:multi:slot4 fdcv11 -cart5 /media/share1/roms/hdbdw3bc3.rom -flop1 /media/share1/EMU/EOU/63EMU.dsk -hard1 /media/share1/EMU/EOU/63SDC.VHD -autoboot_delay 2 -autoboot_command 'DRIVE OFF\nDOS\n' $MAMEPARMS
+mame coco3h -ramsize 512k -ext multi -ext:multi:slot4 fdcv11 -cart5 /media/share1/roms/hdbdw3bc3.rom $MAMEPARMS
 
 # capture MAME ERRORLEVEL
 
