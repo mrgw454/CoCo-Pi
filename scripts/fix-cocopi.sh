@@ -29,6 +29,7 @@ echo
 
 # add new packages
 #sudo apt install -y <package>
+sudo apt install diffuse
 
 # add new programs from source
 
