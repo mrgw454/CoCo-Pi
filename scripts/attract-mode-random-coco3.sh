@@ -3,6 +3,8 @@
 MAMEPARMSFILE=`cat $HOME/.mame/.optional_mame_parameters.txt`
 export MAMEPARMS=$MAMEPARMSFILE
 
+cp $HOME/.mame/cfg/coco3.cfg.beckerport-disabled $HOME/.mame/cfg/coco3.cfg
+
 shopt -s extglob
 shopt -s nocasematch
 

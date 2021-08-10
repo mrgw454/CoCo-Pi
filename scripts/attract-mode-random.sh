@@ -3,6 +3,8 @@
 MAMEPARMSFILE=`cat $HOME/.mame/.optional_mame_parameters.txt`
 export MAMEPARMS=$MAMEPARMSFILE
 
+cp $HOME/.mame/cfg/coco2.cfg.beckerport-disabled $HOME/.mame/cfg/coco2.cfg
+
 shopt -s extglob
 
 for run in {1..100}
