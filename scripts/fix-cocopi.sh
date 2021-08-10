@@ -53,6 +53,11 @@ sudo apt install diffuse
 # remove "&" from web link address
 #sed -i 's/\&//' "$HOME/Desktop/pyDriveWire Web UI.desktop"
 
+# set symbolic link for correct HDD image
+rm /media/share1/EMU/VHD/HDD.DSK
+ln -s /media/share1/EMU/VHD/DECBVHD.img /media/share1/EMU/VHD/HDD.DSK
+
+
 echo
 
 echo
