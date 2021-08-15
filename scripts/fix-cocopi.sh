@@ -31,6 +31,22 @@ echo
 #sudo apt install -y <package>
 sudo apt install diffuse
 
+# install new MAME .cfg files
+
+# check to see if new MAME cfg files have already been installed
+if [ -e $HOME/.mame/cfg/cfg-installed-20210814.txt ]
+then
+       echo new MAME cfg files already installed
+       echo
+else
+
+       echo installing new MAME cfg files...
+       cp $HOME/update/*cfg* $HOME/.mame/cfg
+       touch $HOME/.mame/cfg/cfg-installed-20210814.txt
+       echo
+fi
+
+
 # add new programs from source
 
 # check to see if libagar libraries have already been installed
