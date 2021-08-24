@@ -29,22 +29,21 @@ echo
 
 # add new packages
 #sudo apt install -y <package>
-sudo apt install diffuse
 
 # install new MAME .cfg files
 
 # check to see if new MAME cfg files have already been installed
-if [ -e $HOME/.mame/cfg/cfg-installed-20210814.txt ]
-then
-       echo new MAME cfg files already installed
-       echo
-else
+#if [ -e $HOME/.mame/cfg/cfg-installed-20210814.txt ]
+#then
+#       echo new MAME cfg files already installed
+#       echo
+#else
 
-       echo installing new MAME cfg files...
-       cp $HOME/update/*cfg* $HOME/.mame/cfg
-       touch $HOME/.mame/cfg/cfg-installed-20210814.txt
-       echo
-fi
+#       echo installing new MAME cfg files...
+#       cp $HOME/update/*cfg* $HOME/.mame/cfg
+#       touch $HOME/.mame/cfg/cfg-installed-20210814.txt
+#       echo
+#fi
 
 
 # add new programs from source
@@ -70,8 +69,8 @@ fi
 #sed -i 's/\&//' "$HOME/Desktop/pyDriveWire Web UI.desktop"
 
 # set symbolic link for correct HDD image
-rm /media/share1/EMU/VHD/HDD.DSK
-ln -s /media/share1/EMU/VHD/DECBVHD.img /media/share1/EMU/VHD/HDD.DSK
+#rm /media/share1/EMU/VHD/HDD.DSK
+#ln -s /media/share1/EMU/VHD/DECBVHD.img /media/share1/EMU/VHD/HDD.DSK
 
 
 echo
