@@ -3,6 +3,9 @@ clear
 MAMEPARMSFILE=`cat $HOME/.mame/.optional_mame_parameters.txt`
 export MAMEPARMS=$MAMEPARMSFILE
 
+# disable Becker port
+cp $HOME/.mame/cfg/coco3.cfg.beckerport-disabled $HOME/.mame/cfg/coco3.cfg
+
 if [ -e $HOME/.mame/.mame_floppy ]
 then
     floppy=`cat $HOME/.mame/.mame_floppy`

@@ -4,7 +4,7 @@ MAMEPARMSFILE=`cat $HOME/.mame/.optional_mame_parameters.txt`
 export MAMEPARMS=$MAMEPARMSFILE
 
 # disable Becker port
-cp $HOME/.mame/cfg/coco2.cfg.beckerport-disabled $HOME/.mame/cfg/coco2.cfg
+cp $HOME/.mame/cfg/coco2h.cfg.beckerport-disabled $HOME/.mame/cfg/coco2h.cfg
 
 if [ -e $HOME/.mame/.mame_floppy ]
 then
@@ -18,7 +18,7 @@ then
         read -p  "Press any key to continue." -n1 -s
         echo
 
-	mame coco2 -ramsize 64k -ext multi -ext:multi:slot1 gmc -flop1 "$floppy" $MAMEPARMS
+	mame coco2h -ramsize 64k -flop1 "$floppy" $MAMEPARMS
 
     else
 
@@ -33,7 +33,7 @@ then
 
 else
 
-mame coco2 -ramsize 64k -ext multi -ext:multi:slot1 gmc $MAMEPARMS
+    mame coco2 -ramsize 64k $MAMEPARMS
 
 fi
 

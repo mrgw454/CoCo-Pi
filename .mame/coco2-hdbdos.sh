@@ -4,9 +4,9 @@ MAMEPARMSFILE=`cat $HOME/.mame/.optional_mame_parameters.txt`
 export MAMEPARMS=$MAMEPARMSFILE
 
 # enable Becker port
-cp $HOME/.mame/cfg/coco2h.cfg.beckerport-enabled $HOME/.mame/cfg/coco2h.cfg
+cp $HOME/.mame/cfg/coco2.cfg.beckerport-enabled $HOME/.mame/cfg/coco2.cfg
 
-mame coco2h -ramsize 64k -ext multi -ext:multi:slot4 fdcv11 -cart5 /media/share1/roms/hdbdw3bck.rom $MAMEPARMS
+mame coco2 -ramsize 64k -cart /media/share1/roms/hdbdw3bck.rom $MAMEPARMS
 
 # capture MAME ERRORLEVEL
 

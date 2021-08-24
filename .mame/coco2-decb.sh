@@ -18,7 +18,7 @@ then
         read -p  "Press any key to continue." -n1 -s
         echo
 
-	mame coco2 -ramsize 64k -ext multi -ext:multi:slot1 gmc -flop1 "$floppy" $MAMEPARMS
+	mame coco2 -ramsize 64k -flop1 "$floppy" $MAMEPARMS
 
     else
 
@@ -33,7 +33,7 @@ then
 
 else
 
-mame coco2 -ramsize 64k -ext multi -ext:multi:slot1 gmc $MAMEPARMS
+    mame coco2 -ramsize 64k $MAMEPARMS
 
 fi
 

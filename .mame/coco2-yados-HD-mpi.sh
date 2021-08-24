@@ -9,6 +9,7 @@ $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk eject 0
 $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk insert 0 /media/share1/DW4/AUTOEXEC/AUTOEXEC.DSK
 $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk insert 1 /media/share1/DW4/YADOS/yados.dsk
 
+# enable Becker port
 cp $HOME/.mame/cfg/coco2.cfg.beckerport-enabled $HOME/.mame/cfg/coco2.cfg
 
 mame coco2 -ramsize 64k -ext multi -ext:multi:slot4 fdcv11 -cart5 /media/share1/roms/yados.rom -hard1 /media/share1/EMU/VHD/HDD.DSK -autoboot_delay 8 -autoboot_command 'N\nDRIVE I 1,6,3\nDRIVE U 0\nDRIVE M 0,1,0,0,0\nDRIVE M 1,0,0\nDRIVE M 2,0,1\nDRIVE I:DRIVE M\n\nRUN"WIDTH32.BAS:1"\n' $MAMEPARMSFILE
@@ -29,8 +30,6 @@ else
         echo
         read -p  "Press any key to continue." -n1 -s
 fi
-
-cp $HOME/.mame/cfg/coco2.cfg.beckerport-disabled $HOME/.mame/cfg/coco2.cfg
 
 cd $HOME/.mame
 CoCoPi-menu-Coco2.sh

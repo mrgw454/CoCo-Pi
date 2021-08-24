@@ -3,6 +3,7 @@ clear
 MAMEPARMSFILE=`cat $HOME/.mame/.optional_mame_parameters.txt`
 export MAMEPARMS=$MAMEPARMSFILE
 
+# disable artifacting
 cp $HOME/.mame/cfg/coco2.cfg.artifacting-disabled $HOME/.mame/cfg/coco2.cfg
 
 $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk eject 0
@@ -25,8 +26,8 @@ fi
 
 $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk eject 0
 
+# enable artifacting
 cp $HOME/.mame/cfg/coco2.cfg.artifacting-enabled $HOME/.mame/cfg/coco2.cfg
 
 cd $HOME/.mame
 CoCoPi-menu-Coco2.sh
-

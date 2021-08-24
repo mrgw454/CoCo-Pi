@@ -20,8 +20,5 @@ else
         read -p  "Press any key to continue." -n1 -s
 fi
 
-# enable Becker port
-cp $HOME/.mame/cfg/coco3.cfg.beckerport-enabled $HOME/.mame/cfg/coco3.cfg
-
 cd $HOME/.mame
 CoCoPi-menu-Coco3.sh
