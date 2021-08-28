@@ -1,0 +1,16 @@
+*** CoCo 3 WIP support ***
+
+http://www.6809.org.uk/tmp/xroar/
+
+wget http://www.6809.org.uk/tmp/xroar/xroar-snap-0.37.347.tar.gz
+
+extract archive to source folder
+
+cd xroar-snap-0.37.347
+
+./configure
+
+make
+
+sudo cp xroar /usr/local/bin/xroar-snap-0.37.347
+
