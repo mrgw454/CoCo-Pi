@@ -24,7 +24,7 @@ EX_07_LB=Compile assembly program (lwasm)
 EX_07_CM=/usr/bin/lwasm --6809 --decb --output=%d/%e.bin %d/%f
 EX_07_WD=%d
 EX_08_LB=Compile assembly program (asm6809)
-EX_08_CM=/usr/bin/asm6809 --coco --output=%d/%e.bin %d/%f
+EX_08_CM=/usr/local/bin/asm6809 --coco --output=%d/%e.bin %d/%f
 EX_08_WD=%d
 EX_09_LB=Compile C program (CMOC)
 EX_09_CM=/usr/bin/cmoc -o %d/%e.bin %d/%f
