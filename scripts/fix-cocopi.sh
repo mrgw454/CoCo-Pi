@@ -62,6 +62,24 @@ echo
 
 #echo
 
+
+# add sample source programs
+# check to see if already installed
+
+if [ -e /media/share1/source/source-installed.txt ]
+then
+       echo Sample source programs already installed
+       echo
+else
+
+       tar xzf /home/pi/update/source-samples.tar.gz -C /
+       sudo make install
+       touch /media/share1/source/source-installed.txt
+fi
+
+echo
+
+
 # disable "excute" prompt in file manager
 #sed -i 's/quick_exec=0/quick_exec=1/' $HOME/.config/libfm/libfm.conf
 

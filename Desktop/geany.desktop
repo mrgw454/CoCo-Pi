@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Geany
+Comment=A fast and lightweight IDE using GTK+
+Exec=geany %F
+Icon=geany
+Terminal=false
