@@ -79,6 +79,22 @@ fi
 echo
 
 
+# add geany.conf file
+# check to see if already installed
+
+if [ -e $HOME/.config/geany/geany-config-installed.txt ]
+then
+       echo Geany config file already installed
+       echo
+else
+
+       cp $HOME/update/geany.conf $HOME/.config/geany
+       touch $HOME/.config/geany/geany-config-installed.txt
+fi
+
+echo
+
+
 # disable "excute" prompt in file manager
 #sed -i 's/quick_exec=0/quick_exec=1/' $HOME/.config/libfm/libfm.conf
 
