@@ -73,7 +73,6 @@ then
 else
 
        tar xzf /home/pi/update/source-samples.tar.gz -C /
-       sudo make install
        touch /media/share1/source/source-installed.txt
 fi
 
