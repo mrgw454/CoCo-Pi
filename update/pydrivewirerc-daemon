@@ -1,0 +1,27 @@
+# Main Instance
+option daemonPidFile /tmp/pyDriveWire.pid
+option daemonLogFile /tmp/pyDriveWire.log
+option accept True
+option port 65504
+option uiPort 6800
+option hdbdos True
+option printFormat txt
+option printPrefix output
+option printDir /media/share1/printer/
+option experimental printer
+option experimental ssh
+dw server debug 1
+dw server conn debug 1
+dw disk insert 0 /media/share1/DW4/FURMAN/DWTERM/DWTERM.dsk
+mc setdir /media/share1/JIMG
+
+#[serial]
+#option port /dev/ttyUSB1
+#option speed 115200
+#dw disk insert 0 /media/share1/SDC/FURMAN/DWTERM.dsk
+
+[connect]
+option accept True
+option host localhost
+#option port 54321
+option port 6809

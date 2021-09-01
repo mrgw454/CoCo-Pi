@@ -27,83 +27,62 @@ fi
 
 echo
 
+# set hotfixes file
+file="$HOME/update/cocopi-fixes.txt"
+# create the file if it doesn't exist
+touch $file
+
+
 # add new packages
 #sudo apt install -y <package>
 
-# install new MAME .cfg files
-
-# check to see if new MAME cfg files have already been installed
-#if [ -e $HOME/.mame/cfg/cfg-installed-20210814.txt ]
-#then
-#       echo new MAME cfg files already installed
-#       echo
-#else
-
-#       echo installing new MAME cfg files...
-#       cp $HOME/update/*cfg* $HOME/.mame/cfg
-#       touch $HOME/.mame/cfg/cfg-installed-20210814.txt
-#       echo
-#fi
-
-
-# add new programs from source
-
-# check to see if libagar libraries have already been installed
-#if [ -e $HOME/source/libagar-installed.txt ]
-#then
-#	echo libagar library already installed
-#	echo
-#else
-
-#	cd $HOME/source/libagar
-#	sudo make install
-#	touch $HOME/source/libagar-installed.txt
-#fi
-
-#echo
+# update pyDriveWire
+# check for fix
+fix="fix-20210901-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	cp $HOME/update/pydrivewirerc-daemon $HOME/pyDriveWire-namedobj/config
+	cp $HOME/update/pydrivewirerc-daemon $HOME/pyDriveWire-release/config
+	cp $HOME/update/start_pyDW.sh $HOME/pyDriveWire-namedobj
+	cp $HOME/update/start_pyDW.sh $HOME/pyDriveWire-release
+	echo "$fix" >>$file
+	echo Please restart pyDriveWire to complete fix.  Thank you.
+	echo
+fi
 
 
 # add sample source programs
-# check to see if already installed
-
-if [ -e /media/share1/source/source-installed.txt ]
-then
-       echo Sample source programs already installed
-       echo
+# check for fix
+fix="fix-20210901-02"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
 else
-
-       tar xzf /home/pi/update/source-samples.tar.gz -C /
-       touch /media/share1/source/source-installed.txt
+	echo Applying fix $fix...
+	echo
+	tar xzf /home/pi/update/source-samples.tar.gz -C /
+	echo "$fix" >>$file
+	echo
 fi
-
-echo
 
 
 # add geany.conf file
-# check to see if already installed
-
-if [ -e $HOME/.config/geany/geany-config-installed.txt ]
-then
-       echo Geany config file already installed
-       echo
+# check for fix
+fix="fix-20210901-03"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
 else
-
-       cp $HOME/update/geany.conf $HOME/.config/geany
-       touch $HOME/.config/geany/geany-config-installed.txt
+	echo Applying fix $fix...
+	echo
+	cp $HOME/update/geany.conf $HOME/.config/geany
+	echo "$fix" >>$file
+	echo
 fi
-
-echo
-
-
-# disable "excute" prompt in file manager
-#sed -i 's/quick_exec=0/quick_exec=1/' $HOME/.config/libfm/libfm.conf
-
-# remove "&" from web link address
-#sed -i 's/\&//' "$HOME/Desktop/pyDriveWire Web UI.desktop"
-
-# set symbolic link for correct HDD image
-#rm /media/share1/EMU/VHD/HDD.DSK
-#ln -s /media/share1/EMU/VHD/DECBVHD.img /media/share1/EMU/VHD/HDD.DSK
 
 
 echo
