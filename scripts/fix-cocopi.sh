@@ -103,6 +103,21 @@ else
 fi
 
 
+# add updated coco3dw1 cfg files for MAME
+# check for fix
+fix="fix-20210901-05"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	cp $HOME/update/coco3dw1* $HOME/.mame/cfg
+	echo "$fix" >>$file
+	echo
+fi
+
+
 echo
 
 echo
