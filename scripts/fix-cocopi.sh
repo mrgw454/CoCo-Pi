@@ -118,6 +118,22 @@ else
 fi
 
 
+# add new font
+# check for fix
+fix="fix-20210902-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	cp $HOME/update/CRYSTALR.TTF $HOME/.fonts
+	fc-cache -v -f
+	echo "$fix" >>$file
+	echo
+fi
+
+
 echo
 
 echo
