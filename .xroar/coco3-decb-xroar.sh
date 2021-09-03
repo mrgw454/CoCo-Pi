@@ -20,7 +20,7 @@ then
       echo
 
       #xroar -c $HOME/.xroar/xroar.conf -default-machine coco2bus -ao-fragments 1 -load "$floppy"
-      xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -ccr simulated -load "$floppy" $XROARPARMS
+      xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -load "$floppy" $XROARPARMS
 
     else
 
@@ -35,7 +35,7 @@ then
 
 else
 
-    xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -ccr simulated $XROARPARMS
+    xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 $XROARPARMS
 
 fi
 

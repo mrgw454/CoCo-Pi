@@ -9,7 +9,7 @@ clear
 
 cd $HOME/.xroar
 #xroar -c $HOME/.xroar/xroar.conf -default-machine coco2bus -machine-cart yados -ao-fragments 1
-xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -machine-cart yados -ccr simulated $XROARPARMS
+xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -machine-cart yados $XROARPARMS
 
 # capture XRoar ERRORLEVEL
 

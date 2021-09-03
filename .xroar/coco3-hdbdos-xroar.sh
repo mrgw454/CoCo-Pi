@@ -8,7 +8,7 @@ export XROARPARMS=$XROARPARMSFILE
 clear
 
 cd $HOME/.xroar
-xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -machine-cart hdbdos -ccr simulated $XROARPARMS
+xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -machine-cart hdbdos $XROARPARMS
 
 # capture XRoar ERRORLEVEL
 
