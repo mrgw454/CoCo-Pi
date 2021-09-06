@@ -33,9 +33,6 @@ file="$HOME/update/cocopi-fixes.txt"
 touch $file
 
 
-# add new packages
-#sudo apt install -y <package>
-
 # update pyDriveWire
 # check for fix
 fix="fix-20210901-01"
@@ -144,6 +141,21 @@ else
 	echo Applying fix $fix...
 	echo
 	unzip -o -j $HOME/update/Squanchy.zip -d /media/share1/SDC/TLINDNER
+	echo "$fix" >>$file
+	echo
+fi
+
+
+# add new packages
+# check for fix
+fix="fix-20210905-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	sudo apt install -y dos2unix dialog gnome-screenshot doublecmd-gtk
 	echo "$fix" >>$file
 	echo
 fi
