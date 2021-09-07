@@ -161,6 +161,21 @@ else
 fi
 
 
+# add updated MAME launch scripts for CoCo
+# check for fix
+fix="fix-20210906-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	cp $HOME/update/coco*.sh $HOME/.mame
+	echo "$fix" >>$file
+	echo
+fi
+
+
 echo
 
 echo
