@@ -176,6 +176,21 @@ else
 fi
 
 
+# add new packages
+# check for fix
+fix="fix-20210908-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        sudo apt install -y zenity
+        echo "$fix" >>$file
+        echo
+fi
+
+
 echo
 
 echo
