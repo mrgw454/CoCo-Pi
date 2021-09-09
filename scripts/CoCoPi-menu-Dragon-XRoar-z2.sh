@@ -9,7 +9,7 @@ options=("Dragon 32" \
          "Dragon Tano (NTSC)" \
          "Return to Main Menu")
 
-while opt=$(zenity --width=640 --height=480 --title="$title" --text="$prompt" --list  --column=""  "${options[@]}"); do
+while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/home/pi/Pictures/CoCo-Pi.png" --text="$prompt" --list  --column=""  "${options[@]}"); do
     select=""
 
     case "$opt" in
