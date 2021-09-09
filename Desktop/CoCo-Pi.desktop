@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Encoding=UTF-8
+Name=CoCo-Pi
+Comment=CoCo-Pi Menu Launcher
+Icon=/home/pi/Pictures/CoCo-Pi.png
+Exec=/home/pi/scripts/menu-z2.sh
+Terminal=false
+Categories=Games
