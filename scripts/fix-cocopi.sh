@@ -191,6 +191,22 @@ else
 fi
 
 
+# add new packages for remote desktop access
+# check for fix
+fix="fix-20210909-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        sudo apt install -y xrdp tightvncserver remmina remmina-common remmina-plugin-rdp
+        sudo systemctl enable xrdp
+        echo "$fix" >>$file
+        echo
+fi
+
+
 echo
 
 echo
