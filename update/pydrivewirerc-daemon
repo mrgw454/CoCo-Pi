@@ -13,7 +13,6 @@ option experimental ssh
 dw server debug 1
 dw server conn debug 1
 dw disk insert 0 /media/share1/DW4/FURMAN/DWTERM/DWTERM.dsk
-mc setdir /media/share1/JIMG
 
 #[serial]
 #option port /dev/ttyUSB1
@@ -25,3 +24,4 @@ option accept True
 option host localhost
 #option port 54321
 option port 6809
+mc setdir /media/share1/JIMG

@@ -207,6 +207,23 @@ else
 fi
 
 
+# update pydrivewirerc-daemon config file
+# check for fix
+fix="fix-20210909-02"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	cp $HOME/update/pydrivewirerc-daemon $HOME/pyDriveWire-namedobj/config
+	cp $HOME/update/pydrivewirerc-daemon $HOME/pyDriveWire-release/config
+	echo "$fix" >>$file
+	echo Please restart pyDriveWire to complete fix.  Thank you.
+	echo
+fi
+
+
 echo
 
 echo
