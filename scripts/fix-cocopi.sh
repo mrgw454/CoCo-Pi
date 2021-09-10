@@ -224,6 +224,28 @@ else
 fi
 
 
+# update menus
+# check for fix
+fix="fix-20210910-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+
+	if [ -f $HOME/.mame/menu ]
+	then
+    		rm $HOME/.mame/menu
+	fi
+
+	ln -s $HOME/.mame/CoCoPi-menu.sh $HOME/.mame/menu
+	ln -s $HOME/.mame/CoCoPi-menu-Utilities.sh $HOME/.mame/utils
+	echo "$fix" >>$file
+	echo
+fi
+
+
 echo
 
 echo
