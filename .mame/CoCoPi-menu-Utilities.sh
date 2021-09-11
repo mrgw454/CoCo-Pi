@@ -33,9 +33,9 @@ sellistbox=green,black
     "3" "CoCoPi    Downloads Menu" \
     "4" "CoCoPi    Drive Emulation Menu" \
     "5" "CoCoPi    Mount Media Menu" \
-    "7" "CoCoPi    RVPN Menu" \
-    "8" "Reboot    Raspberry Pi" \
-    "9" "Shutdown  Raspberry Pi" \
+    "6" "CoCoPi    RVPN Menu" \
+    "7" "Reboot    Raspberry Pi" \
+    "8" "Shutdown  Raspberry Pi" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
