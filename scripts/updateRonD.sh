@@ -12,7 +12,7 @@ else
     echo git repo does not exist.  Cloning and updating...
     echo
     cd $HOME/source
-    https://github.com/mrgw454/RonD.git
+    git clone https://github.com/mrgw454/RonD.git
     echo
 fi
 
