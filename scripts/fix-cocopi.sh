@@ -283,6 +283,11 @@ else
     		rm $HOME/.mame/menu
 	fi
 
+	if [ -f $HOME/.mame/utils ]
+	then
+    		rm $HOME/.mame/utils
+	fi
+
 	ln -s $HOME/.mame/CoCoPi-menu.sh $HOME/.mame/menu
 	ln -s $HOME/.mame/CoCoPi-menu-Utilities.sh $HOME/.mame/utils
 	echo "$fix" >>$file
