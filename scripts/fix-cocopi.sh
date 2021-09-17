@@ -337,15 +337,15 @@ else
         echo
 
 	if [ "$RPI" == "400" ]; then
-        	sudo cp $HOME/update/mame.ini.RPi400 $HOME/.mame/.mame.ini
+        	cp $HOME/update/mame.ini.RPi400 $HOME/.mame/mame.ini
 	fi
 
 	if [ "$RPI" == "4 M" ]; then
-		sudo cp $HOME/update/mame.ini.RPi4 $HOME/.mame/.mame.ini
+		cp $HOME/update/mame.ini.RPi4 $HOME/.mame/mame.ini
 	fi
 
 	if [ "$RPI" == "3 M" ]; then
-		sudo cp $HOME/update/mame.ini.RPi3 $HOME/.mame/.mame.ini
+		cp $HOME/update/mame.ini.RPi3 $HOME/.mame/mame.ini
 	fi
 
         echo "$fix" >>$file
