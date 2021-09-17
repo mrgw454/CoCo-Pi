@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "zenity --info --width=200 --height=50 --title=\"Attract Mode\" --text=\"Click OK to cancel\nAttract Mode.\n\nProcess ID: $$\"; kill $$ &" > /tmp/cancel.sh
-#chmod a+x /tmp/cancel.sh; /tmp/cancel.sh &
+chmod a+x /tmp/cancel.sh; /tmp/cancel.sh &
 
 # select random Coco 3 program and run for 120 seconds each
 
