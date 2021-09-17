@@ -326,6 +326,33 @@ else
 fi
 
 
+# update MAME ini file for software hash
+# check for fix
+fix="fix-20210917-05"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+
+	if [ "$RPI" == "400" ]; then
+        	sudo cp $HOME/update/mame.ini.RPi400 $HOME/.mame/.mame.ini
+	fi
+
+	if [ "$RPI" == "4 M" ]; then
+		sudo cp $HOME/update/mame.ini.RPi4 $HOME/.mame/.mame.ini
+	fi
+
+	if [ "$RPI" == "3 M" ]; then
+		sudo cp $HOME/update/mame.ini.RPi3 $HOME/.mame/.mame.ini
+	fi
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
 echo
 
 echo

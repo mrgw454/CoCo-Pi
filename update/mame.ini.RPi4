@@ -9,7 +9,7 @@ writeconfig               0
 #
 homepath                  .
 rompath                   roms;/opt/mame/roms;/media/share1/roms;/media/share1/software
-hashpath                  hash;/opt/mame/hash
+hashpath                  $HOME/.mame/hash;hash;/opt/mame/hash
 samplepath                samples;/opt/mame/samples;/media/share1/samples
 artpath                   artwork;/opt/mame/artwork
 ctrlrpath                 ctrlr;/opt/mame/ctrlr
