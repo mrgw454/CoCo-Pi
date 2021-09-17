@@ -49,6 +49,18 @@ else
 fi
 
 
+if [ -d $HOME/.mame/hash ]
+then
+    echo hash folder exists.
+    echo
+else
+    echo hash folder does not exist.  Creating...
+    echo
+    mkdir $HOME/.mame/hash
+    echo
+fi
+
+
 if [ -L $HOME/.mame/hash/coco_flop.xml ]
 then
     echo hash file symlink exists.
