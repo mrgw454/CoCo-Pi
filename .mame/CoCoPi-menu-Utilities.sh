@@ -36,6 +36,7 @@ sellistbox=green,black
     "6" "CoCoPi    RVPN Menu" \
     "7" "Reboot    Raspberry Pi" \
     "8" "Shutdown  Raspberry Pi" \
+    "9" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -49,5 +50,6 @@ sellistbox=green,black
         6) CoCoPi-menu-Utilities-RVPN.sh;;
         7) rebootRPi.sh;;
         8) shutdownRPi.sh;;
+        9) menu;;
         *) echo "Quitting...";;
     esac
