@@ -30,14 +30,13 @@ while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/hom
     "${options[5]}" ) $HOME/.mame/coco3-decb-6309-ORCH90.sh;;
     "${options[6]}" ) $HOME/.mame/coco3-decb-term.sh;;
     "${options[7]}" ) $HOME/.mame/coco3-hdbdos.sh;;
-    "${options[8]}" ) $HOME/.mame/coco3-hdbdos-6309.sh;;
-    "${options[9]}" ) $HOME/.mame/coco3-hdbdos-6309-nitros9.sh;;
-    "${options[10]}" ) $HOME/.mame/coco3-Fuzix-pyDW.sh;;
-    "${options[11]}" ) $HOME/.mame/coco3-Fuzix-lwwire.sh;;
-    "${options[12]}" ) $HOME/.mame/coco3-hdbdos-pyDW-PLATO.sh;;
-    "${options[13]}" ) $HOME/.mame/coco3-yados-HD-mpi.sh;;
-    "${options[14]}" ) $HOME/.mame/coco3-yados-HD-6309-mpi.sh;;
-    "${options[15]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
+    "${options[8]}" ) $HOME/.mame/coco3-hdbdos-6309-nitros9.sh;;
+    "${options[9]}" ) $HOME/.mame/coco3-Fuzix-pyDW.sh;;
+    "${options[10]}" ) $HOME/.mame/coco3-Fuzix-lwwire.sh;;
+    "${options[11]}" ) $HOME/.mame/coco3-hdbdos-pyDW-PLATO.sh;;
+    "${options[12]}" ) $HOME/.mame/coco3-yados-HD-mpi.sh;;
+    "${options[13]}" ) $HOME/.mame/coco3-yados-HD-6309-mpi.sh;;
+    "${options[14]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
 
      *) echo "Quitting...";;
     esac
