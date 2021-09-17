@@ -246,6 +246,28 @@ else
 fi
 
 
+# update OVCC ini file for YA-DOS
+# check for fix
+fix="fix-20210917-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+
+	if [ -f $HOME/.mame/menu ]
+	then
+    		rm $HOME/.mame/menu
+	fi
+
+	cp $HOME/update/coco3-yados-HD-6309-mpi-OVCC.ini $HOME/.ovcc/ini
+	cp $HOME/update/backupEMUConfigs-2021-09-17.tar.gz /media/share1
+	echo "$fix" >>$file
+	echo
+fi
+
+
 echo
 
 echo
