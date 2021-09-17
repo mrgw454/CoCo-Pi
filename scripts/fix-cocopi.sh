@@ -295,6 +295,22 @@ else
 fi
 
 
+# get coco-hash project from git
+# check for fix
+fix="fix-20210917-03"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	cd $HOME/source
+	git clone https://github.com/mrgw454/coco-hash.git
+	echo "$fix" >>$file
+	echo
+fi
+
+
 echo
 
 echo
