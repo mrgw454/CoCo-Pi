@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "zenity --info --width=200 --height=50 --title=\"Attract Mode\" --text=\"Click OK to cancel\nAttract Mode.\n\nProcess ID: $$\"; kill $$ &" > /tmp/cancel.sh
-chmod a+x /tmp/cancel.sh; /tmp/cancel.sh &
+#chmod a+x /tmp/cancel.sh; /tmp/cancel.sh &
 
 # select random Coco 3 program and run for 120 seconds each
 
@@ -37,16 +37,16 @@ file=$(shuf -ezn 1 $1/* | xargs -0 -n1 echo)
      sleep 2
 
      if [[ $file == *.dsk ]]; then
-
-	imgtool dir coco_jvc_rsdos "$file"
+	decb dir "$file"
 	echo -e
 
-	program=$(imgtool dir coco_jvc_rsdos "$file" | grep -E '.BAS' | grep -m 1 -o '^[^ ]*')
+	dir=$(decb dir "$file" | grep -E '.BAS')
+	program=$(echo $dir | cut -d " " -f1)
+	ext=$(echo $dir | cut -d " " -f2)
 	echo -e
 
 	# BASIC program
-	if [[ ${program:(-4)} == '.BAS' ]]; then
-
+	if [[ $ext == 'BAS' ]]; then
 		echo Program to run/execute: $program
 		sleep 2
 		mame coco3 -ram 512k -ext multi -flop1 "$file" -seconds_to_run 120 -autoboot_delay 2 -autoboot_command "RUN \"$program\"\n" $MAMEPARMS
@@ -57,12 +57,13 @@ file=$(shuf -ezn 1 $1/* | xargs -0 -n1 echo)
 
 
 	if [[ $BAS != 1 ]]; then
-		program=$(imgtool dir coco_jvc_rsdos "$file" | grep -E '.BIN' | grep -m 1 -o '^[^ ]*')
+		dir=$(decb dir "$file" | grep -E '.BIN')
+		program=$(echo $dir | cut -d " " -f1)
+		ext=$(echo $dir | cut -d " " -f2)
 		echo -e
-
+		
 		# BINARY program
-		if [[ ${program:(-4)} == '.BIN' ]]; then
-
+		if [[ $ext == 'BIN' ]]; then
 			echo Program to run/execute: $program
 			sleep 2
 			mame coco3 -ram 512k -ext multi -flop1 "$file" -seconds_to_run 120 -autoboot_delay 2 -autoboot_command "LOADM \"$program\":EXEC\n" $MAMEPARMS
@@ -101,6 +102,8 @@ else
 fi
 
 BAS=0
+
+read -p "Press any key to continue... " -n1 -s
 
 done
 
