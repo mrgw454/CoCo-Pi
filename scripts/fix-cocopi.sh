@@ -353,6 +353,22 @@ else
 fi
 
 
+# add sample programs for use with SuperSprite FM+ Board
+# check for fix
+fix="fix-20210929-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+        tar xzvf $HOME/update/MSX2.tar.gz -C /
+	echo "$fix" >>$file
+	echo
+fi
+
+
+
 echo
 
 echo
