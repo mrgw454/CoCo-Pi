@@ -383,24 +383,20 @@ else
 fi
 
 
-# get latest QB64 from git
+# get latest QB64 package (compiled from git)
 # check for fix
-#fix="fix-20211012-01"
-#if grep -q "$fix" $file; then
-#        echo fix $fix already complete.
-#        echo
-#else
-#        echo Applying fix $fix...
-#        echo
-#        cd $HOME/source
-#        git clone https://github.com/QB64Team/qb64.git qb64-2.0
-#	cd qb64-2.0
-#	./setup_lnx.sh
-#	cp $HOME/update/QB64-2.0.desktop $HOME/Desktop
-#        echo "$fix" >>$file
-#        echo
-#fi
-
+fix="fix-20211012-02"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+	tar xzvf $HOME/update/QB64-2.0-compiled.tar.gz -C /
+	cp $HOME/update/QB64-2.0.desktop $HOME/Desktop
+        echo "$fix" >>$file
+        echo
+fi
 
 
 
