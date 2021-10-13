@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=QB64-2.0
+Comment=QB64-2.0
+Icon=/home/pi/source/qb64-2.0/source/qb64.ico
+Exec=/home/pi/source/qb64-2.0/run_qb64.sh
+Type=Application
+Encoding=UTF-8
+Terminal=false
+Name[en_US]=QB64-2.0
