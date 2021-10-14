@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=rclone GUI
+Exec=rclone rcd --rc-web-gui
+Comment=
+Terminal=true
+Icon=/home/pi/Pictures/rclone.png
+Type=Application
+Path=/home/pi
+Name[en_US]=rclone GUI

@@ -399,6 +399,25 @@ else
 fi
 
 
+# add new rclone package (cloud drive access)
+# check for fix
+fix="fix-20211014-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	cd $HOME/source
+	wget https://downloads.rclone.org/v1.56.2/rclone-v1.56.2-linux-arm-v7.deb
+	sudo dpkg -i rclone-v1.56.2-linux-arm-v7.deb
+	cp $HOME/update/rclone.png $HOME/Pictures
+	cp "$HOME/update/rclone GUI.desktop" $HOME/Desktop
+	echo "$fix" >>$file
+	echo
+fi
+
+
 
 
 echo
