@@ -34,12 +34,13 @@ sellistbox=green,black
     "4" "Tandy  Color Computer 3 Menu (XRoar) WIP!" \
     "5" "Tandy  Color Computer 3 Menu (OVCC)" \
     "6" "TRS-80 MC-10 Menu" \
-    "7" "Dragon Menu" \
-    "8" "Dragon Menu (XRoar)" \
-    "9" "Utilities Menu" \
-    "10" "Internet/Online Menu" \
-    "11" "Attract (Kiosk) Mode Menu" \
-    "12" "Shutdown Raspberry Pi" \
+    "7" "TRS-80 MC-10 Menu (XRoar) WIP!" \
+    "8" "Dragon Menu" \
+    "9" "Dragon Menu (XRoar)" \
+    "10" "Utilities Menu" \
+    "11" "Internet/Online Menu" \
+    "12" "Attract (Kiosk) Mode Menu" \
+    "13" "Shutdown Raspberry Pi" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -51,11 +52,12 @@ sellistbox=green,black
         4) CoCoPi-menu-Coco3-XRoar.sh;;
         5) CoCoPi-menu-Coco3-OVCC.sh;;
         6) CoCoPi-menu-MC10.sh;;
-        7) CoCoPi-menu-Dragon.sh;;
-        8) CoCoPi-menu-Dragon-XRoar.sh;;
-        9) CoCoPi-menu-Utilities.sh;;
-       10) CoCoPi-menu-Online.sh;;
-       11) CoCoPi-menu-Attract.sh;;
-       12) shutdownRPi.sh;;
+        7) CoCoPi-menu-MC10-XRoar.sh;;
+        8) CoCoPi-menu-Dragon.sh;;
+        9) CoCoPi-menu-Dragon-XRoar.sh;;
+       10) CoCoPi-menu-Utilities.sh;;
+       11) CoCoPi-menu-Online.sh;;
+       12) CoCoPi-menu-Attract.sh;;
+       13) shutdownRPi.sh;;
         *) echo "Quitting...";;
     esac
