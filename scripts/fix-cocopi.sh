@@ -433,6 +433,35 @@ else
 fi
 
 
+# install Visual Studio Code and some extensions
+# check for fix
+fix="fix-20211026-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	mkdir $HOME/source/code
+	cp $HOME/update/code_1.61.2-1634655444_armhf.deb $HOME/source/code
+	cp $HOME/update/blairleduc.6x09-assembly-0.6.7.vsix $HOME/source/code
+	cp $HOME/update/jasonpittman.cocotools-0.0.8.vsix $HOME/source/code
+	cp $HOME/update/Tandy.6x09-assembly-0.1.0.vsix $HOME/source/code
+	cp $HOME/update/Tandy.color-basic-0.1.4.vsix $HOME/source/code
+	cp $HOME/update/code.desktop $HOME/Desktop
+				
+	cd $HOME/source/code
+	sudo dpkg -i code_1.61.2-1634655444_armhf.deb
+	code --install-extension $HOME/source/code/Tandy.6x09-assembly
+	code --install-extension $HOME/source/code/Tandy.color-basic
+	code --install-extension $HOME/source/code/jasonpittman.cocotools
+	code --install-extension $HOME/source/code/blairleduc.6x09-assembly
+				
+	echo "$fix" >>$file
+	echo
+fi
+
+
 
 
 echo
