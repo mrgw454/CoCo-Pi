@@ -452,10 +452,10 @@ else
 				
 	cd $HOME/source/code
 	sudo dpkg -i code_1.61.2-1634655444_armhf.deb
-	code --install-extension $HOME/source/code/Tandy.6x09-assembly
-	code --install-extension $HOME/source/code/Tandy.color-basic
-	code --install-extension $HOME/source/code/jasonpittman.cocotools
-	code --install-extension $HOME/source/code/blairleduc.6x09-assembly
+	code --install-extension $HOME/source/code/Tandy.6x09-assembly-0.1.0.vsix
+	code --install-extension $HOME/source/code/Tandy.color-basic-0.1.4.vsix
+	code --install-extension $HOME/source/code/jasonpittman.cocotools-0.0.8.vsix
+	code --install-extension $HOME/source/code/blairleduc.6x09-assembly-0.6.7.vsix
 				
 	echo "$fix" >>$file
 	echo
