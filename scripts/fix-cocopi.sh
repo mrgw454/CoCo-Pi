@@ -462,6 +462,22 @@ else
 fi
 
 
+# add new library package and updated cecb from Toolshed project
+# check for fix
+fix="fix-20211027-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	sudo apt-get install libfuse-dev
+	sudo cp $HOME/update/cecb /usr/bin
+	echo "$fix" >>$file
+	echo
+fi
+
+
 
 
 echo
