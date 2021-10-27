@@ -488,6 +488,7 @@ else
 	echo Applying fix $fix...
 	echo
 	sed -i "s/number_exec_menu_items=10/number_exec_menu_items=12/" /home/pi/.config/geany/geany.conf
+	tar xzf /home/pi/update/source-samples-mc10.tar.gz -C /
 	echo "$fix" >>$file
 	echo
 fi
