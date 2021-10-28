@@ -515,6 +515,27 @@ else
 fi
 
 
+# update menu symlink
+# check for fix
+fix="fix-20211028-02"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+
+        if [ -f $HOME/.mame/menu ]
+        then
+                rm $HOME/.mame/menu
+        fi
+
+        ln -s $HOME/.mame/CoCoPi-menu.sh $HOME/.mame/menu
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
