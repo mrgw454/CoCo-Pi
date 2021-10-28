@@ -10,9 +10,9 @@
     # Below you can enter the corresponding commands
 
     case $RETVAL in
-        1) mc-10-4k-xroar.sh;;
-        2) mc-10-20k-xroar.sh;;
-        3) mc-10-32k-xroar.sh;;
+        1) $HOME/.xroar/mc-10-4k-xroar.sh;;
+        2) $HOME/.xroar/mc-10-20k-xroar.sh;;
+        3) $HOME/.xroar/mc-10-32k-xroar.sh;;
         4) menu;;
         *) echo "Quitting...";;
     esac
