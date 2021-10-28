@@ -37,10 +37,11 @@ sellistbox=green,black
     "7" "TRS-80 MC-10 Menu (XRoar) WIP!" \
     "8" "Dragon Menu" \
     "9" "Dragon Menu (XRoar)" \
-    "10" "Utilities Menu" \
-    "11" "Internet/Online Menu" \
-    "12" "Attract (Kiosk) Mode Menu" \
-    "13" "Shutdown Raspberry Pi" \
+    "10" "Clone Systems Menu" \
+    "11" "Utilities Menu" \
+    "12" "Internet/Online Menu" \
+    "13" "Attract (Kiosk) Mode Menu" \
+    "14" "Shutdown Raspberry Pi" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -55,9 +56,10 @@ sellistbox=green,black
         7) CoCoPi-menu-MC10-XRoar.sh;;
         8) CoCoPi-menu-Dragon.sh;;
         9) CoCoPi-menu-Dragon-XRoar.sh;;
-       10) CoCoPi-menu-Utilities.sh;;
-       11) CoCoPi-menu-Online.sh;;
-       12) CoCoPi-menu-Attract.sh;;
-       13) shutdownRPi.sh;;
+       10) CoCoPi-menu-Clones.sh;;
+       11) CoCoPi-menu-Utilities.sh;;
+       12) CoCoPi-menu-Online.sh;;
+       13) CoCoPi-menu-Attract.sh;;
+       14) shutdownRPi.sh;;
         *) echo "Quitting...";;
     esac

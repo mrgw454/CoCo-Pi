@@ -11,6 +11,7 @@ options=("TRS-80 Color Computer 2 Menu" \
          "TRS-80 MC-10 Menu (XRoar) WIP!" \
          "Dragon Menu"  \
          "Dragon Menu (XRoar)" \
+         "Clone Systems Menu" \
          "Attract Mode Menu")
 
 while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/home/pi/Pictures/CoCo-Pi.png" --text="$prompt" --list  --column=""  "${options[@]}"); do
@@ -26,7 +27,8 @@ while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/hom
     "${options[6]}" ) $HOME/scripts/CoCoPi-menu-MC10-XRoar-z2.sh & kill $$;;
     "${options[7]}" ) $HOME/scripts/CoCoPi-menu-Dragon-z2.sh & kill $$;;
     "${options[8]}" ) $HOME/scripts/CoCoPi-menu-Dragon-XRoar-z2.sh & kill $$;;
-    "${options[9]}" ) $HOME/scripts/CoCoPi-menu-Attract-z2.sh & kill $$;;
+    "${options[9]}" ) $HOME/scripts/CoCoPi-menu-Clones-z2.sh & kill $$;;
+    "${options[10]}" ) $HOME/scripts/CoCoPi-menu-Attract-z2.sh & kill $$;;
      
      *) echo "Quitting...";;
     esac
