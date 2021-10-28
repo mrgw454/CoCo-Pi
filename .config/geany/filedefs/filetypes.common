@@ -32,3 +32,6 @@ EX_09_WD=%d
 EX_10_LB=Create MC-10 WAV file and launch MAME (local)
 EX_10_CM=/home/pi/scripts/makeWAV-mc10.sh mc10
 EX_10_WD=%d
+EX_11_LB=Create MC-10 WAV file and launch XRoar (local)
+EX_11_CM=/home/pi/scripts/makeWAV-mc10-XRoar.sh mc10
+EX_11_WD=%d
