@@ -21,10 +21,10 @@ EX_06_LB=Build Coco 3 DSK image and launch MAME (pyDW)
 EX_06_CM=makeDSK.sh coco3dw1 y
 EX_06_WD=%d
 EX_07_LB=Build Coco 3 DSK image and launch XRoar (local)
-EX_07_CM=makeDSK.sh coco3 n
+EX_07_CM=makeDSK-XRoar.sh coco3 n
 EX_07_WD=%d
 EX_08_LB=Build Coco 3 DSK image and launch XRoar (pyDW)
-EX_08_CM=makeDSK.sh coco3dw1 y
+EX_08_CM=makeDSK-XRoar.sh coco3 y
 EX_08_WD=%d
 EX_09_LB=Compile assembly program (lwasm)
 EX_09_CM=/usr/bin/lwasm --6809 --decb --output=%d/%e.bin %d/%f
