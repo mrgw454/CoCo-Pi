@@ -50,7 +50,7 @@ if [[ $1 =~ --h|--help|-h ]];then
     echo -e
     echo -e "Example syntax:"
     echo -e
-    echo -e "./$scriptname [MC10]"
+    echo -e "./$scriptname <mc-10 driver> <y>|<n>"
     echo -e
     exit 1
 
@@ -141,7 +141,7 @@ fi
 
 # (optional) load MAME and mount cassette image
 
-if [[ $1 =~ MC10|mc10 ]];then
+if [[ $1 =~ MC10|mc10 && $2 =~ n|N ]] ;then
 
 		mame -homepath $HOME/.mame $1 -cass "$PWD/$cassette.WAV" $MAMEPARMS
 
@@ -151,22 +151,54 @@ if [[ $1 =~ MC10|mc10 ]];then
 
 		exit 1
 
-	else
+fi
 
-	echo -e
-	echo -e "Not a valid MC-10 based driver.  Exiting."
-	echo -e
-	echo -e "Some valid MC-10 drivers for MAME are:"
-	echo -e
-	mame -listfull | grep "MC-10"
 
-	echo -e
-	echo -e "Done."
-	echo -e
+if [[ $1 =~ MCX128|mcx128 && $2 =~ n|N ]] ;then
 
-	exit 1
+		mame -homepath $HOME/.mame mc10 -ext mcx128 -cass "$PWD/$cassette.WAV" $MAMEPARMS
+
+		echo -e
+		echo -e "Done."
+		echo -e
+
+		exit 1
 
 fi
+
+
+if [[ $1 =~ MCX128|mcx128 && $2 =~ y|Y ]] ;then
+
+
+		# set pyDriveWire/EMCEE directory to where source file is located
+		$HOME/pyDriveWire/pyDwCli http://localhost:6800 mc setdir "$PWD"
+		mame mc10 -ext mcx128 -rs232 null_modem -bitb socket.localhost:6809 -cass "$PWD/$cassette.WAV" $MAMEPARMS > /dev/null
+		echo -e
+		echo -e "Done."
+		echo -e
+
+		# set pyDriveWire/EMCEE directory to default location
+		$HOME/pyDriveWire/pyDwCli http://localhost:6800 mc setdir /media/share1/JIMG 
+		
+		exit 1
+
+fi
+
+
+#	echo -e
+#	echo -e "Not a valid MC-10 based driver.  Exiting."
+#	echo -e
+#	echo -e "Some valid MC-10 drivers for MAME are:"
+#	echo -e
+#	mame -listfull | grep "MC-10"
+#
+#	echo -e
+#	echo -e "Done."
+#	echo -e
+#
+#	exit 1
+
+
 
 	echo -e
 	echo -e "Done."

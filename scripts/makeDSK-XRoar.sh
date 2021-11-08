@@ -232,9 +232,37 @@ if [[ $2 =~ Y|y ]];then
 		$HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk show 0
 		echo -e
 
-    #cd $HOME/.xroar
-    xroar -c $HOME/.xroar/xroar.conf -default-machine coco2bus -machine-cart hdbdos $XROARPARMS
+		xroar -c $HOME/.xroar/xroar.conf -default-machine coco2bus -machine-cart hdbdos $XROARPARMS
 
+		# eject disk from pyDriveWire
+		$HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk eject 0
+
+                echo -e
+                echo -e "Done."
+                echo -e
+                exit 1
+
+	fi
+
+
+	# Coco 3 section
+
+	if [[ $1 =~ coco3 ]];then
+
+        # eject disk from pyDriveWire
+        $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk eject 0
+        echo -e
+
+        # insert disk for pyDriveWire
+        $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk insert 0 "$workdir/$floppy.DSK"
+        echo -e
+
+        # show (confirm) disk mounted in pyDriveWire
+        $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk show 0
+        echo -e
+
+		xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -machine-cart hdbdos $XROARPARMS		
+	
 		# eject disk from pyDriveWire
 		$HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk eject 0
 
@@ -251,7 +279,7 @@ if [[ $2 =~ Y|y ]];then
 	echo -e
 	echo -e "Some valid Coco drivers for XRoar are:"
 	echo -e
-	echo -e "coco2, coco2b, coco2bus"
+	echo -e "coco2, coco2b, coco2bus, coco3"
 
 	echo -e
 	echo -e "Done."
@@ -263,12 +291,12 @@ else
 
 	# (optional) load XRoar and mount the disk image as DRIVE 0
 
-	# Coco 2 section
+	# Coco 2 and Coco 3 section
 
-	if [[ $1 =~ coco2|coco2b|coco2bus ]];then
+	if [[ $1 =~ coco2|coco2b|coco2bus|coco3 ]];then
 
     #cd $HOME/.xroar
-    xroar -c $HOME/.xroar/xroar.conf -default-machine coco2bus -load "$PWD/$floppy.DSK" $XROARPARMS
+    xroar -c $HOME/.xroar/xroar.conf -default-machine $1 -load "$PWD/$floppy.DSK" $XROARPARMS
 
 		echo -e
 		echo -e "Done."
@@ -283,7 +311,7 @@ else
 	echo -e
 	echo -e "Some valid Coco drivers for XRoar are:"
 	echo -e
-	echo -e "coco2, coco2b, coco2bus"
+	echo -e "coco2, coco2b, coco2bus, coco3"
 
 	echo -e
 	echo -e "Done."

@@ -536,6 +536,22 @@ else
 fi
 
 
+# add new build commands for geany
+# check for fix
+fix="fix-20211108-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	sed -i "s/number_exec_menu_items=12/number_exec_menu_items=16/" /home/pi/.config/geany/geany.conf
+	tar xzf /home/pi/update/source-samples-mc10.tar.gz -C /
+	echo "$fix" >>$file
+	echo
+fi
+
+
 
 echo
 
