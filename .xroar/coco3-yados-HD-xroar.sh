@@ -19,7 +19,7 @@ $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk eject 0
 $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk insert 0 /media/share1/DW4/AUTOEXEC/AUTOEXEC.DSK
 $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk insert 1 /media/share1/DW4/YADOS/yados.dsk
 
-xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -machine-cart ide -type 'N\rDRIVE I 1,4,3\rDRIVE U 0\rDRIVE M 0,1,0,0,0\rDRIVE M 1,0,0\rDRIVE M 2,0,1\rDRIVE I:DRIVE M\rLOAD"WIDTH32.BAS:1"\rRUN\r' $XROARPARMS
+xroar -c $HOME/.xroar/xroar.conf -default-machine coco3 -machine-cart ide -load-hd0 $HOME/.xroar/hd0.img -type 'N\rDRIVE I 1,4,3\rDRIVE U 0\rDRIVE M 0,1,0,0,0\rDRIVE M 1,0,0\rDRIVE M 2,0,1\rDRIVE I:DRIVE M\rLOAD"WIDTH32.BAS:1"\rRUN\r' $XROARPARMS
 
 $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk eject 0
 $HOME/pyDriveWire/pyDwCli http://localhost:6800 dw disk eject 1
