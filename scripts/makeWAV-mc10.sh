@@ -171,8 +171,8 @@ if [[ $1 =~ MCX128|mcx128 && $2 =~ y|Y ]] ;then
 
 
 		# set pyDriveWire/EMCEE directory to where source file is located and select the proper pyDW instance
-		$HOME/pyDriveWire/pyDwCli http://localhost:6800 mc setdir "$PWD"
 		$HOME/pyDriveWire/pyDwCli http://localhost:6800 dw instance select 1
+		$HOME/pyDriveWire/pyDwCli http://localhost:6800 mc setdir "$PWD"
 
 		mame mc10 -ext mcx128 -rs232 null_modem -bitb socket.localhost:6809 -cass "$PWD/$cassette.WAV" $MAMEPARMS > /dev/null
 
