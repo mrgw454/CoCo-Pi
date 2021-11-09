@@ -1,0 +1,13 @@
+http://sun.hasenbraten.de/vbcc/
+http://www.compilers.de/vbcc.html
+
+wget http://www.ibaug.de/vbcc/vbcc.tar.gz
+
+cd vbcc
+
+The bin folder contains all the binaries.
+
+6809 target uses vbcchc12
+
+Look at ./config/s6809 for setup
+

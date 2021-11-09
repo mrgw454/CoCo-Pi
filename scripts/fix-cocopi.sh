@@ -562,6 +562,7 @@ else
         echo Applying fix $fix...
         echo
         tar xzf /home/pi/update/vbcc-20210903.tar.gz -C /
+	cp $HOME/update/HOWTO-vbcc.txt $HOME/source
         echo "$fix" >>$file
         echo
 fi
