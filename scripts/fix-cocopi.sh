@@ -583,6 +583,23 @@ else
 fi
 
 
+# add new packages required for Mike Rowan's printer project
+# check for fix
+fix="fix-20211116-02"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        sudo apt install -y inotify-tools cups
+	sudo usermod -aG lpadmin pi
+	sudo cupsctl --remote-any
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
