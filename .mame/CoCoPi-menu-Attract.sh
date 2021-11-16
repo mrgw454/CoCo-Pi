@@ -10,7 +10,7 @@
     "7" "Dragon 64 MAME  Attract Mode Disks (SSFM)" \
     "8" "Dragon 32 XRoar Attract Mode Carts (random)" \
     "9" "MC-10 MAME      Attract Mode Jim Gerrie (random)" \
-    "10 "Coco 3 MAME     Image Slideshow (random)" \
+    "10" "Coco 3 MAME     Image Slideshow (random)" \
     "11" "Coco 3 MAME     CoCoTracker Demo (random)" \
     "12" "Coco Demo       Simultaneous Sessions" \
     "13" "MAME            Play Donkey Kong Hacks" \
