@@ -4,7 +4,7 @@
     "1" "Coco 2 MAME     Attract Mode Carts (random)" \
     "2" "Coco 3 MAME     Attract Mode Disks (random)" \
     "3" "Coco 3 MAME     Attract Mode Carts (random)" \
-    "4" "Dragon 64 MAME  Attract Mode Disks (SSFM)" \
+    "4" "Coco 2 MAME     Attract Mode Disks (SSFM)" \
     "5" "Coco 2 XRoar    Attract Mode Carts (random)" \
     "6" "Dragon 32 MAME  Attract Mode Carts (random)" \
     "7" "Dragon 64 MAME  Attract Mode Disks (SSFM)" \
