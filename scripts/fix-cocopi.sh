@@ -615,7 +615,7 @@ else
 	rm src/tasm6801
 	git pull
 	cd src
-	make
+	c++ *.cpp -o tasm6801
 	sudo cp tasm6801 /usr/local/bin
 	sudo ln -s /usr/local/bin/tasm6801 /usr/local/bin/tasm
 
