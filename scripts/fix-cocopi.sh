@@ -610,6 +610,22 @@ else
         echo Applying fix $fix...
         echo
         sudo apt install -y figlet jp2a toilet asciio
+
+	cd /home/pi/source/tasm6801
+	rm src/tasm6801
+	git pull
+	cd src
+	make
+	sudo cp tasm6801 /usr/local/bin
+	sudo ln -s /usr/local/bin/tasm6801 /usr/local/bin/tasm
+
+	cd /home/pi/source/mcbasic
+	make clean
+	git pull
+	cp $HOME/update/Makefile.mcbasic $HOME/source/mcbasic/src/Makefile
+	make
+	sudo cp src/mcbasic /usr/local/bin
+
         echo "$fix" >>$file
         echo
 fi
