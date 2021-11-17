@@ -600,6 +600,32 @@ else
 fi
 
 
+# add new packages
+# check for fix
+fix="fix-20211117-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        sudo apt install -y figlet jp2a toilet asciio
+	cd $HOME/source/mcbasic
+	rm $HOMR/source/mcbasic/mcbasic
+	git pull
+	make
+	sudo cp mcbasic /usr/local/bin
+	cd $HOME/source/tasm6801
+	rm $HOMR/source/tasm6801/src/tasm6801
+	git pull
+	c++ *.cpp -o tasm6801
+	sudo cp src/tasm6801 /usr/local/bin
+	sudo ln -s /usr/local/bin/tasm6801 /usr/local/bin/tasm
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
