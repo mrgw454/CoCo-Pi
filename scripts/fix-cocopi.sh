@@ -624,7 +624,7 @@ else
 	git pull
 	cp $HOME/update/Makefile.mcbasic $HOME/source/mcbasic/src/Makefile
 	make
-	sudo cp src/mcbasic /usr/local/bin
+	sudo cp mcbasic /usr/local/bin
 
         echo "$fix" >>$file
         echo
