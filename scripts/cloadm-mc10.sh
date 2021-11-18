@@ -34,8 +34,7 @@ read -p "Press any key to continue... " -n1 -s
 echo -e
 echo -e
 
-#omxplayer -o local "$RESULT"
-play "$RESULT"
+omxplayer -o local "$RESULT"
 
 echo -e
 echo -e
