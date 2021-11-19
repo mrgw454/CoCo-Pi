@@ -655,6 +655,28 @@ else
 fi
 
 
+# add new cas2wav package
+# check for fix
+fix="fix-20211119-02"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+
+        cp $HOME/update/cas2wav-0.8.tar.gz $HOME/source
+        cd /home/pi/source
+	tar zxvf cas2wav-0.8.tar.gz
+	cd cas2wav-0.8
+	make
+        sudo cp cas2wav /usr/local/bin
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
