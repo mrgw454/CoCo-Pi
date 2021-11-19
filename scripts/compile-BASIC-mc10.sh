@@ -32,35 +32,42 @@ workdir=$(pwd)
 # compile BASIC program
 
 mcbasic -native $1
-
+echo -e
 
 if [ -f "$workdir/$filename.asm" ]; then
 
 	# assemble object code from compiler
+	echo Assembling $filename.asm...
+	echo -e
 	tasm6801 $workdir/$filename.asm
 
 
 	if [ -f "$workdir/$filename.c10" ]; then
 
 		# convert assembled binary into WAV file
+		echo Converting $filename.c10 to WAV...
+		echo -e
 		cas2wav $workdir/$filename.c10 $workdir/$filename.wav
-		
+
 	else
-	
+
+		echo -e
 		echo "ERROR - $filename.c10" not found.  Perhaps an assembly issue?
 		echo -e
 		exit 1
-		
-	fi	
-	
+
+	fi
+
 else
 
+	echo -e
 	echo "ERROR - $filename.asm" not found.  Perhaps a compile issue?
 	echo -e
 	exit 1
 
 fi
 
+ls -l $filename*
 
 echo -e
 echo -e "Done."
