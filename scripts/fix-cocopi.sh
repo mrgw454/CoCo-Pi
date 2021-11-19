@@ -631,6 +631,30 @@ else
 fi
 
 
+# add new mcbasic package
+# check for fix
+fix="fix-20211119-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+
+        cd /home/pi/source/mcbasic
+        make clean
+	rm /home/pi/source/mcbasic/mcbasic
+	rm /home/pi/source/mcbasic/src/mcbasic
+        cp $HOME/update/coreimplementation.cpp $HOME/source/mcbasic/src
+        cp $HOME/update/coretarget.cpp $HOME/source/mcbasic/src
+        make
+        sudo cp mcbasic /usr/local/bin
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
