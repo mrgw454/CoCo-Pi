@@ -697,6 +697,25 @@ else
 fi
 
 
+# get DECB Preprocessor project from git
+# check for fix
+fix="fix-20211120-02"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        cd $HOME/source
+        git clone https://github.com/yggdrasilradio/preprocessor.git
+	cd $HOME/sourcepreprocessor
+	sudo cp decbpp /usr/local/bin
+        cp basic.vim ~/.vim/basic.vim
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
