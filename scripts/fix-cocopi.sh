@@ -686,6 +686,7 @@ if grep -q "$fix" $file; then
 else
         echo Applying fix $fix...
         echo
+	sudo apt install -y gawk
 	sudo apt remove -y cmoc
         tar xvf $HOME/update/cmoc-0.1.72-CoCoPi.tar.gz -C /
         cd $HOME/source/cmoc-0.1.72
