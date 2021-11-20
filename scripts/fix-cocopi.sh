@@ -708,9 +708,9 @@ else
         echo
         cd $HOME/source
         git clone https://github.com/yggdrasilradio/preprocessor.git
-	cd $HOME/sourcepreprocessor
+	cd $HOME/source/preprocessor
 	sudo cp decbpp /usr/local/bin
-        cp basic.vim ~/.vim/basic.vim
+        cp basic.vim ~/.vim/syntax/basic.vim
         echo "$fix" >>$file
         echo
 fi
