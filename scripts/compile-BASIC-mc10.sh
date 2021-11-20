@@ -39,7 +39,7 @@ if [ -f "$workdir/$filename.asm" ]; then
 	# assemble object code from compiler
 	echo Assembling $filename.asm...
 	echo -e
-	tasm6801 $workdir/$filename.asm
+	tasm6801 $filename.asm
 
 
 	if [ -f "$workdir/$filename.c10" ]; then
