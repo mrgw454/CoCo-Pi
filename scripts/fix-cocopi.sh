@@ -732,6 +732,21 @@ else
 fi
 
 
+# update build commands for geany
+# check for fix
+fix="fix-20211123-02"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        sed -i "s/number_exec_menu_items=16/number_exec_menu_items=24/" /home/pi/.config/geany/geany.conf
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
