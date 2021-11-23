@@ -716,6 +716,22 @@ else
 fi
 
 
+# install screen recorder utilities
+# check for fix
+fix="fix-20211123-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        sudo apt install -y vlc-plugin-access-extra simplescreenrecorder
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
