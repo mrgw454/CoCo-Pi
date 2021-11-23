@@ -3,15 +3,18 @@
 # check for existing coco-hash project files folder
 if [ -d $HOME/source/coco-hash ]
 then
-    echo coco-hash project folder exists.
+    echo coco-hash project folder exists.  Updating...
     echo
+    cd $HOME/source/coco-hash
+    git pull
+
 else
-    echo coco-hash project folder does not exist.  Please perform an "Update CoCo-Pi from git repo"
-    echo and try this command again.  Aborting.
+    echo coco-hash project folder does not exist.  Cloning...
     echo
+    cd $HOME/source
+    git clone https://github.com/mrgw454/coco-hash.git
     echo
     read -p "Press any key to continue... " -n1 -s
-    exit 1
 fi
 
 
@@ -21,18 +24,17 @@ then
     echo coco_flop disk software files exist.
     echo
 else
-    echo coco_flop disk software files do not exist.  Please run coco-hash process to download and generate
-    echo the correct CoCo disk software and MAME hash file.  More information can be found here:
+    echo coco_flop disk software files do not exist.  Downloading, extracting and generating new HASH file...
     echo
-    echo Aborting.
+    cd $HOME/source/coco-hash
+    ./get-disk-images.sh
+    ./extract-zips.sh
+    ./coco-hash.sh
     echo
     echo
     read -p "Press any key to continue... " -n1 -s
     exit 1
 fi
-
-
-
 
 
 # check for existing of symlink folder
