@@ -26,10 +26,11 @@
     "23" "Install   XRoar package file" \
     "24" "Install   OVCC package file" \
     "25" "Update    MAME software HASH file for CoCo" \
-    "26" "Reboot    Raspberry Pi" \
-    "27" "Shutdown  Raspberry Pi" \
-    "28" "Return to Utilities Menu" \
-    "29" "Return to Main Menu" \
+    "26" "Toggle    Raspberry PI config.txt updates" \
+    "27" "Reboot    Raspberry Pi" \
+    "28" "Shutdown  Raspberry Pi" \
+    "29" "Return to Utilities Menu" \
+    "30" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -44,8 +45,8 @@
         7) editWiFi.sh && CoCoPi-menu-Utilities-Administration.sh;;
         8) adjustVol.sh && CoCoPi-menu-Utilities-Administration.sh ;;
         9) test-controller.sh && CoCoPi-menu-Utilities-Administration.sh;;
-	10) runRaspiConfig.sh && CoCoPi-menu-Utilities-Administration.sh;;
-	11) editConfig-txt.sh && CoCoPi-menu-Utilities-Administration.sh;;
+        10) runRaspiConfig.sh && CoCoPi-menu-Utilities-Administration.sh;;
+        11) editConfig-txt.sh && CoCoPi-menu-Utilities-Administration.sh;;
         12) overlock-cocopi.sh && CoCoPi-menu-Utilities-Administration.sh;;
         13) showBluetoothPairings.sh && CoCoPi-menu-Utilities-Administration.sh;;
         14) backupBluetoothPairings.sh && CoCoPi-menu-Utilities-Administration.sh;;
@@ -60,9 +61,10 @@
         23) installXRoarpackage.sh && CoCoPi-menu-Utilities-Administration.sh;;
         24) installOVCCpackage.sh && CoCoPi-menu-Utilities-Administration.sh;;
         25) updateMAME-hash-CoCo.sh && CoCoPi-menu-Utilities-Administration.sh;;
-        26) rebootRPi.sh;;
-        27) shutdownRPi.sh;;
-        28) CoCoPi-menu-Utilities.sh;;
-        29) menu;;
+        26) toggleRpiConfigUpdate.sh && CoCoPi-menu-Utilities-Administration.sh;;
+        27) rebootRPi.sh;;
+        28) shutdownRPi.sh;;
+        29) CoCoPi-menu-Utilities.sh;;
+        30) menu;;
         *) echo "Quitting...";;
     esac

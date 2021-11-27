@@ -10,20 +10,27 @@ echo
 
 backupdate=$(date +"%Y%m%d_%H%M%S")
 
-# detect model of Raspberry Pi
-RPI=`cat /proc/device-tree/model | cut -c14-16`
+if [ -e "$HOME/update/.fix-cocopi-skip-config-clobber" ]; then
+	echo "Skipping update of /boot/config.txt - If you want this update then go to the Utilities->Administration menu and select Toggle Raspberry PI config.txt updates"
+else
 
-if [ "$RPI" == "400" ]; then
+	# detect model of Raspberry Pi
+	RPI=`cat /proc/device-tree/model | cut -c14-16`
+
+	if [ "$RPI" == "400" ]; then
         sudo cp /home/pi/update/config.txt.RPi400 /boot/config.txt
-fi
+	fi
 
-if [ "$RPI" == "4 M" ]; then
+	if [ "$RPI" == "4 M" ]; then
         sudo cp /home/pi/update/config.txt.RPi4 /boot/config.txt
+	fi
+
+	if [ "$RPI" == "3 M" ]; then
+        sudo cp /home/pi/update/config.txt.RPi3 /boot/config.txt
+	fi
+
 fi
 
-if [ "$RPI" == "3 M" ]; then
-        sudo cp /home/pi/update/config.txt.RPi3 /boot/config.txt
-fi
 
 echo
 
