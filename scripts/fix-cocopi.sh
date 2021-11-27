@@ -12,6 +12,9 @@ backupdate=$(date +"%Y%m%d_%H%M%S")
 
 if [ -e "$HOME/update/.fix-cocopi-skip-config-clobber" ]; then
 	echo "Skipping update of /boot/config.txt - If you want this update then go to the Utilities->Administration menu and select Toggle Raspberry PI config.txt updates"
+	echo
+	read -p "Press any key to continue... " -n1 -s
+	echo
 else
 
 	# detect model of Raspberry Pi
