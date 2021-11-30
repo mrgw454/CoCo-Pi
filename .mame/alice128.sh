@@ -10,7 +10,7 @@ export MAMEPARMS=$MAMEPARMSFILE
 # option host localhost
 # option port 6809
 
-mame alice -ext alice_mcx128 -rs232 null_modem -bitb socket.localhost:6809 $MAMEPARMS > /dev/null
+mame alice -ext alice128 -rs232 null_modem -bitb socket.localhost:6809 $MAMEPARMS > /dev/null
 
 # capture MAME ERRORLEVEL
 
