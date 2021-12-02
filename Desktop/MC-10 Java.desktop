@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=MC-10 Java
+Exec=chromium-browser "/home/pi/source/mc-10/MC10/index.html"
+Comment=
+Terminal=false
+Icon=/home/pi/Pictures/mc-10.png
+Type=Application
+Path=/home/pi/source/mc-10/MC10
+Name[en_US]=MC-10 Java

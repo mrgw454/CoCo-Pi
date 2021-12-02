@@ -757,6 +757,21 @@ else
 fi
 
 
+# add source for Greg Dionne's MC-10 Java emulator
+# check for fix
+fix="fix-20211202-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        tar xzf /home/pi/update/gd-mc10.tar.gz -C /
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
