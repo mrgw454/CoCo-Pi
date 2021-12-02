@@ -766,6 +766,12 @@ if grep -q "$fix" $file; then
 else
         echo Applying fix $fix...
         echo
+
+	if [ -d $HOME/source/mc-10 ]
+       	then
+                	rm -r -f $HOME/source/mc-10
+        fi
+
         tar xzf /home/pi/update/gd-mc10.tar.gz -C /
         echo "$fix" >>$file
         echo
