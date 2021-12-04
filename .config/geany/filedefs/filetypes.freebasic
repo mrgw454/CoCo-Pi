@@ -33,7 +33,7 @@ EX_10_LB=Compile assembly program (asm6809)
 EX_10_CM=/usr/bin/asm6809 --coco --output=%d/%e.bin %d/%f
 EX_10_WD=%d
 EX_11_LB=Compile C program (CMOC)
-EX_11_CM=/usr/bin/cmoc -o %d/%e.bin %d/%f
+EX_11_CM=/usr/local/bin/cmoc -o %d/%e.bin %d/%f
 EX_11_WD=%d
 EX_12_LB=Create BASIC MC-10 WAV file and launch MAME (local)
 EX_12_CM=$HOME/scripts/makeWAV-mc10.sh mc10 n
