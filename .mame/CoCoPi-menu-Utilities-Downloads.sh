@@ -10,10 +10,11 @@
     "7" "Update    Jim Gerrie's MC-10 git repo" \
     "8" "Update    Giant HDD image for CoCo" \
     "9" "Update    Ron Delvaux's Picture Gallery" \
-    "10" "Reboot    Raspberry Pi" \
-    "11" "Shutdown  Raspberry Pi" \
-    "12" "Return to Utilities Menu" \
-    "13" "Return to Main Menu" \
+    "10" "Update    Michael Furman's EOU IDE git repo" \
+    "11" "Reboot    Raspberry Pi" \
+    "12" "Shutdown  Raspberry Pi" \
+    "13" "Return to Utilities Menu" \
+    "14" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -28,9 +29,10 @@
         7) updateJIMG.sh && CoCoPi-menu-Utilities-Downloads.sh;;
         8) updateCCHDD.sh && CoCoPi-menu-Utilities-Downloads.sh;;
         9) updateRonD.sh && CoCoPi-menu-Utilities-Downloads.sh;;
-       10) rebootRPi.sh;;
-       11) shutdownRPi.sh;;
-       12) CoCoPi-menu-Utilities.sh;;
-       13) menu;;
+       10) updateEOU-IDE.sh && CoCoPi-menu-Utilities-Downloads.sh;;
+       11) rebootRPi.sh;;
+       12) shutdownRPi.sh;;
+       13) CoCoPi-menu-Utilities.sh;;
+       14) menu;;
         *) echo "Quitting...";;
     esac

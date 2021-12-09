@@ -6,7 +6,8 @@
     "3" "Tandy Color Computer 3 HDB-DOS" \
     "4" "Tandy Color Computer 3 YA-DOS w/HDD" \
     "5" "Tandy Color Computer 3 YA-DOS w/6309 & HDD" \
-    "6" "Return to Main Menu" \
+    "6" "Tandy Color Computer 3 YA-DOS w/6809,512K & NitrOS9 EOU" \
+    "7" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -17,6 +18,7 @@
         3) $HOME/.xroar/coco3-hdbdos-xroar.sh;;
         4) $HOME/.xroar/coco3-yados-HD-xroar.sh;;
         5) $HOME/.xroar/coco3h-yados-HD-xroar.sh;;
-        6) menu;;
+        6) $HOME/.xroar/coco3-yados-nitros9-xroar.sh;;
+        7) menu;;
         *) echo "Quitting...";;
     esac
