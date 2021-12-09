@@ -33,6 +33,6 @@ else
         read -p  "Press any key to continue." -n1 -s
 fi
 
-#cd $HOME/.mame
-#CoCoPi-menu-Coco3-XRoar.sh
-#exit
+cd $HOME/.mame
+CoCoPi-menu-Coco3-XRoar.sh
+exit
