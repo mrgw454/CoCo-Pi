@@ -18,7 +18,7 @@ fi
 
 
 # check for existing of NitrOS9 EOU HDD files
-if [ -f /media/share1/EMU/EOU/68SDC.VHD ]
+if [ -f /media/share1/EMU/EOU/63SDC.VHD ]
 then
     echo EOU HDD files exist.
     echo
@@ -38,17 +38,17 @@ fi
 
 # create EOU IDE based HDD file (overwrite if it already exists)...
 
-if [ -f $HOME/source/eou_ide/68IDE.ide ]
+if [ -f $HOME/source/eou_ide/63IDE.ide ]
     then
-    rm $HOME/source/eou_ide/68IDE.*
+    rm $HOME/source/eou_ide/63IDE.*
 fi
 
 echo Creating EOU IDE based HDD image file...
 cd $HOME/source/eou_ide
-cp /media/share1/EMU/EOU/68SDC.VHD ./
-python ./makebootfileide.py -c 6809 -i $HOME/source/eou_ide/68SDC.VHD
+cp /media/share1/EMU/EOU/63SDC.VHD ./
+python ./makebootfileide.py -c 6309 -i $HOME/source/eou_ide/63SDC.VHD
 
-    if [ -f $HOME/source/eou_ide/68IDE.ide ]
+    if [ -f $HOME/source/eou_ide/63IDE.ide ]
     then
     echo
     echo EOU IDE HDD image created successfully for use with XRoar.
