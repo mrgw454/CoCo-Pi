@@ -46,7 +46,7 @@ fi
 echo Creating EOU IDE based HDD image file...
 cd $HOME/source/eou_ide
 cp /media/share1/EMU/EOU/68SDC.VHD ./
-python ./makebootfileide.py
+python ./makebootfileide.py -c 6809 -i $HOME/source/eou_ide/68SDC.VHD
 
     if [ -f $HOME/source/eou_ide/68IDE.ide ]
     then
