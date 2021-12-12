@@ -7,7 +7,7 @@ options=("Tandy Color Computer 3 DECB" \
          "Tandy Color Computer 3 HDB-DOS" \
          "Tandy Color Computer 3 YA-DOS w/HDD" \
          "Tandy Color Computer 3 YA-DOS w/6309 & HDD" \
-         "Tandy Color Computer 3 YA-DOS w/6809,512K & NitrOS9 EOU" \
+         "Tandy Color Computer 3 YA-DOS w/6309,2MB & NitrOS9 EOU" \
          "Return to Main Menu")
 
 while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/home/pi/Pictures/CoCo-Pi.png" --text="$prompt" --list  --column=""  "${options[@]}"); do

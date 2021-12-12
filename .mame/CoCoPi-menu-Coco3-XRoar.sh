@@ -6,7 +6,7 @@
     "3" "Tandy Color Computer 3 HDB-DOS" \
     "4" "Tandy Color Computer 3 YA-DOS w/HDD" \
     "5" "Tandy Color Computer 3 YA-DOS w/6309 & HDD" \
-    "6" "Tandy Color Computer 3 YA-DOS w/6809,512K & NitrOS9 EOU" \
+    "6" "Tandy Color Computer 3 YA-DOS w/6309,2MB & NitrOS9 EOU" \
     "7" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
