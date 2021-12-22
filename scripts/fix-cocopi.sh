@@ -810,22 +810,22 @@ fi
 
 # add new packages for playsound extension (pyDW)
 # check for fix
-#fix="fix-20211221-01"
-#if grep -q "$fix" $file; then
-#        echo fix $fix already complete.
-#        echo
-#else
-#        echo Applying fix $fix...
-#        echo
-#        sudo apt install -y python-gi gstreamer1.0-tools gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-libav libgirepository1.0-dev
-#        pip install playsound
-#  	sudo patch -p1 -d /usr/local/lib/pypy2.7/dist-packages/pip/_internal/operations/install <$HOME/update/pygobject-install.patch
-#	pypy -m pip install pygobject
-#	pypy -m pip install playsound
-#	sudo patch -R -p1 -d /usr/local/lib/pypy2.7/dist-packages/pip/_internal/operations/install <$HOME/update/pygobject-install.patch
-#       echo "$fix" >>$file
-#       echo
-#fi
+fix="fix-20211221-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        sudo apt install -y python-gi gstreamer1.0-tools gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-libav libgirepository1.0-dev
+        pip install playsound
+  	sudo patch -p1 -d /home/pi/.local/lib/pypy2.7/site-packages/pip/_internal/operations/install <$HOME/update/pygobject-install.patch
+	pypy -m pip install pygobject
+	pypy -m pip install playsound
+	sudo patch -R -p1 -d /home/pi/.local/lib/pypy2.7/site-packages/pip/_internal/operations/install <$HOME/update/pygobject-install.patch
+        echo "$fix" >>$file
+        echo
+fi
 
 
 
