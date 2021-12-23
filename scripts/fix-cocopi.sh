@@ -828,6 +828,26 @@ else
 fi
 
 
+# add new converions utilities from Tormod Volden
+# check for fix
+fix="fix-20212123-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        tar xzf /home/pi/update/conv-tools.tar.gz -C /
+	sudo cp $HOME/source/conv-tools/cas2decb /usr/local/bin
+	sudo cp $HOME/source/conv-tools/ddb2decb /usr/local/bin
+	sudo cp $HOME/source/conv-tools/decb2ddb /usr/local/bin
+	sudo cp $HOME/source/conv-tools/image-patcher /usr/local/bin
+	sudo cp $HOME/source/conv-tools/pad256 /usr/local/bin
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
