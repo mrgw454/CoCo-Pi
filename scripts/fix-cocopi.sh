@@ -848,6 +848,27 @@ else
 fi
 
 
+# update pyDriveWire from git
+# check for fix
+fix="fix-20211226-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        cd $HOME/pyDriveWire-namedobj
+        ./stop_pyDW.sh
+        cd $HOME/pyDriveWire-namedobj
+        git pull
+	cp $HOME/.pydrivewirerc $HOME/.pydrivewirerc.backup.$backupdate
+	cp $HOME/update/.pydrivewirerc.playsound $HOME/.pydrivewirerc
+        echo "$fix" >>$file
+        echo Please restart pyDriveWire to complete fix.  Thank you.
+        echo
+fi
+
+
 
 echo
 
