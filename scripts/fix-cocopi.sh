@@ -863,6 +863,7 @@ else
         git pull
 	cp $HOME/.pydrivewirerc $HOME/.pydrivewirerc.backup.$backupdate
 	cp $HOME/update/.pydrivewirerc.playsound $HOME/.pydrivewirerc
+	cp $HOME/update/coco-playsound.dsk /media/share1/DW4/FURMAN
         echo "$fix" >>$file
         echo Please restart pyDriveWire to complete fix.  Thank you.
         echo
