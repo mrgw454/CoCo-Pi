@@ -885,6 +885,22 @@ else
 fi
 
 
+# add updated mame-0.238 binary with video fix for SSFM support
+# special thanks to Nigel Barnes
+# check for fix
+fix="fix-20220109-02"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        sudo cp $HOME/update/mame mame-0.239-SSFM-fix /opt/mame-0.239/mame
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
