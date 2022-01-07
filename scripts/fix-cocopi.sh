@@ -879,7 +879,7 @@ if grep -q "$fix" $file; then
 else
         echo Applying fix $fix...
         echo
-        cp $HOME/update/coco2h.cfg.SSFM.enabled $HOME/.mame/cfg
+        cp $HOME/update/coco2h.cfg.SSFM-enabled $HOME/.mame/cfg
         echo "$fix" >>$file
         echo
 fi
