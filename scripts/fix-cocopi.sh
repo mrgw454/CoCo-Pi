@@ -870,6 +870,21 @@ else
 fi
 
 
+# add updated coco2h cfg files for MAME (SSFM attract mode)
+# check for fix
+fix="fix-20220109-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        cp $HOME/update/coco2h.cfg.SSFM.enabled $HOME/.mame/cfg
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
