@@ -895,7 +895,8 @@ if grep -q "$fix" $file; then
 else
         echo Applying fix $fix...
         echo
-        sudo cp $HOME/update/mame mame-0.239-SSFM-fix /opt/mame-0.239/mame
+        sudo unzip -o -j $HOME/update/mame mame-0.239-SSFM-fix.zip -d /opt/mame-0.239
+	sudo mv /opt/mame-0.239/mame-0.239-SSFM-fix /opt/mame/mame
         echo "$fix" >>$file
         echo
 fi
