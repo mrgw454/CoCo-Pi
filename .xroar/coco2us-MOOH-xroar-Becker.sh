@@ -16,9 +16,8 @@ clear
 #  xroar -default-machine cocous -nodos -cart mooh -cart-becker -cart-rom sdbdos-eprom8-all-v1.rom
 
 # DW disk image way
-#  xroar -default-machine cocous -cart mooh -cart-becker -run kernel_becker.bin
-#  xroar -default-machine cocous -cart mooh -cart-becker -run kernel_65spi.bin $XROARPARMS
-   xroar -default-machine cocous -cart mooh -cart-becker -run kernel_65spi.bin -load-sd $HOME/.xroar/sdcard.img $XROARPARMS
+#  xroar -default-machine coco2us -cart mooh -cart-rom ~/source/sdboot/bootrom/eprom8.rom -cart-becker -load-sd ./sdcard.img $XROARPARMS
+   xroar -default-machine coco2us -cart mooh -cart-rom ~/source/sdboot/bootrom/eprom8.rom -cart-becker -cart mpi -mpi-load-cart 0=mooh -mpi-load-cart 3=rsdos -mpi-slot 0 -load-sd ./sdcard.img $XROARPARMS
 
 # capture XRoar ERRORLEVEL
 
