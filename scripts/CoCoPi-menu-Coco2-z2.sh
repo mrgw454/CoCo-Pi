@@ -29,8 +29,8 @@ while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/hom
     "${options[7]}" ) $HOME/.mame/coco2-hdbdos-6309.sh;;
     "${options[8]}" ) $HOME/.mame/coco2-hdbdos-pyDW-PLATO.sh;;
     "${options[9]}" ) $HOME/.mame/coco2-yados-HD-mpi.sh;;
-    "${options[10}" ) $HOME/.mame/coco2-yados-HD-6309-mpi.sh;;
-    "${options[11}" ) $HOME/scripts/menu-z2.sh & kill $$;;
+    "${options[10]}" ) $HOME/.mame/coco2-yados-HD-6309-mpi.sh;;
+    "${options[11]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
 
      *) echo "Quitting...";;
     esac
