@@ -932,6 +932,23 @@ else
 fi
 
 
+# add Microsoft TrueType font package
+# check for fix
+fix="fix-20220223-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        cd $HOME/update
+        sudo dpkg -i ttf-mscorefonts-installer_3.8_all.deb
+        echo "$fix" >>$file
+        echo
+fi
+
+
+
 echo
 
 echo
