@@ -968,7 +968,7 @@ else
         cd /home/pi/source/mcbasic
         rm mcbasic
 	make clean
-        git --reset hard
+        git reset --hard
 	git pull
         sed -i 's/-ferror-limit=4 //' src/Makefile
         make
