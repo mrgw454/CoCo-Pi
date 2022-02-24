@@ -958,21 +958,29 @@ else
         echo Applying fix $fix...
         echo
 
-        cd /home/pi/source/tasm6801
-        rm src/tasm6801
-        git pull
-        cd src
-        c++ *.cpp -o tasm6801
-        sudo cp tasm6801 /usr/local/bin
+	if [ "$RPI" == "3 M" ]; then
 
-        cd /home/pi/source/mcbasic
-        rm mcbasic
-	make clean
-        git reset --hard
-	git pull
-        sed -i 's/-ferror-limit=4 //' src/Makefile
-        make
-        sudo cp mcbasic /usr/local/bin
+        	sudo cp $HOME/update/mcbasic /usr/local/bin
+        	sudo cp $HOME/update/tasm6801 /usr/local/bin
+
+	else
+
+        	cd /home/pi/source/tasm6801
+        	rm src/tasm6801
+        	git pull
+        	cd src
+        	c++ *.cpp -o tasm6801
+        	sudo cp tasm6801 /usr/local/bin
+
+        	cd /home/pi/source/mcbasic
+        	rm mcbasic
+		make clean
+        	git reset --hard
+		git pull
+        	sed -i 's/-ferror-limit=4 //' src/Makefile
+        	make
+        	sudo cp mcbasic /usr/local/bin
+	fi
 
         echo "$fix" >>$file
         echo
