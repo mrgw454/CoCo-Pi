@@ -948,6 +948,37 @@ else
 fi
 
 
+# update tasm6801 and mcbasic compiler
+# check for fix
+fix="fix-20220224-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+
+        cd /home/pi/source/tasm6801
+        rm src/tasm6801
+        git pull
+        cd src
+        c++ *.cpp -o tasm6801
+        sudo cp tasm6801 /usr/local/bin
+
+        cd /home/pi/source/mcbasic
+        rm mcbasic
+	make clean
+        git --reset hard
+	git pull
+        sed -i 's/-ferror-limit=4 //' src/Makefile
+        make
+        sudo cp mcbasic /usr/local/bin
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
