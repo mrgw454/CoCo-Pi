@@ -987,6 +987,24 @@ else
 fi
 
 
+# fix mame.ini video setting for MAME-0.241 and above
+# check for fix
+fix="fix-20220228-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        cd $HOME/.mame
+
+	sed -i 's/video                     auto/video                     accel/' mame.ini
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
