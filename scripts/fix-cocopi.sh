@@ -1019,7 +1019,7 @@ else
 
 	cd $HOME/update
 
-		if md5sum -c $HOME/update/Downloads/qb64-2.0.2-George-McGinn-patched.tar.gz.md5; then
+		if md5sum -c $HOME/update/qb64-2.0.2-George-McGinn-patched.tar.gz.md5; then
 
     			echo -e
     			echo -e "Download was successful.  File passed MD5 checksum."
