@@ -1005,6 +1005,48 @@ else
 fi
 
 
+# get latest QB64-2.0.2 package (compiled with patches from George McGinn)
+# check for fix
+fix="fix-20220313-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+	wget -c -P $HOME/update http://rickadams.org/ronklein/Downloads/qb64-2.0.2-George-McGinn-patched.tar.gz
+	wget -c -P $HOME/update http://rickadams.org/ronklein/Downloads/qb64-2.0.2-George-McGinn-patched.tar.md5
+
+	cd $HOME/update
+
+		if md5sum -c $HOME/update/Downloads/qb64-2.0.2-George-McGinn-patched.tar.gz.md5; then
+
+    			echo -e
+    			echo -e "Download was successful.  File passed MD5 checksum."
+    			echo -e
+    			echo -e "Extracting files into $HOME/source..."
+    			echo -e
+    			tar xzvf $HOME/update/qb64-2.0.2-George-McGinn-patched.tar.gz -C /
+    			echo -e
+    			echo -e "Done!"
+    			echo -e
+			echo "$fix" >>$file
+
+		else
+
+    			echo -e
+    			echo -e "Download was unsuccessful.  File did not pass MD5 checksum."
+    			echo -e
+    			echo -e "Aborting."
+    			echo -e
+    			read -p "Press any key to continue." -n1 -s
+
+		fi
+
+        echo
+fi
+
+
 
 echo
 
