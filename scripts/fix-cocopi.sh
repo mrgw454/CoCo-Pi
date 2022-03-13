@@ -1015,7 +1015,7 @@ else
         echo Applying fix $fix...
         echo
 	wget -c -P $HOME/update http://rickadams.org/ronklein/qb64-2.0.2-George-McGinn-patched.tar.gz
-	wget -c -P $HOME/update http://rickadams.org/ronklein/qb64-2.0.2-George-McGinn-patched.tar.md5
+	wget -c -P $HOME/update http://rickadams.org/ronklein/qb64-2.0.2-George-McGinn-patched.tar.gz.md5
 
 	cd $HOME/update
 
