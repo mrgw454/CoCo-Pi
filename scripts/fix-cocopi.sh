@@ -1047,6 +1047,21 @@ else
 fi
 
 
+# add NitrOS9 EOU empty user hard drive image
+# check for fix
+fix="fix-20220317-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        unzip -o -j $HOME/update/EOU_USER_empty_harddrive.zip -d /media/share1/EMU/EOU
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
