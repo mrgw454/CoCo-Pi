@@ -3,7 +3,8 @@
 clear
 
 # set current SDC image filename
-export SDCIMAGE=https://colorcomputerarchive.com/repo/Disks/Coco%20SDC/Image/Coco%20SDC%20Image%20%282022-02-11%29.zip
+#export SDCIMAGE=https://colorcomputerarchive.com/repo/Disks/Coco%20SDC/Image/Coco%20SDC%20Image%20%282022-02-11%29.zip
+export SDCIMAGE=https://colorcomputerarchive.com/repo/Disks/Coco%20SDC/Image/Coco%20SDC%20Image%20%282022-03-20%29.zip
 
 echo
 echo
