@@ -1082,36 +1082,36 @@ fi
 
 # update pyDriveWire
 # check for fix
-fix="fix-20220518-01"
-if grep -q "$fix" $file; then
-        echo fix $fix already complete.
-        echo
-else
-        echo Applying fix $fix...
-        echo
-	cd $HOME
-	git clone https://github.com/n6il/pyDriveWire.git pyDriveWire-playsound
-	cd $HOME/pyDriveWire-playsound
-	git checkout playsound
-	git pull
+#fix="fix-20220518-01"
+#if grep -q "$fix" $file; then
+#        echo fix $fix already complete.
+#        echo
+#else
+#       echo Applying fix $fix...
+#       echo
+#	cd $HOME
+#	git clone https://github.com/n6il/pyDriveWire.git pyDriveWire-playsound
+#	cd $HOME/pyDriveWire-playsound
+#	git checkout playsound
+#	git pull
 
-        cp $HOME/update/pydrivewirerc-daemon $HOME/pyDriveWire-playsound/config
-        cp $HOME/update/start_pyDW.sh $HOME/pyDriveWire-playsound
-        cp $HOME/update/stop_pyDW.sh $HOME/pyDriveWire-playsound
-        cp $HOME/update/status_pyDW.sh $HOME/pyDriveWire-playsound
-        cp $HOME/update/pyDW.sh $HOME/pyDriveWire-playsound
+#       cp $HOME/update/pydrivewirerc-daemon $HOME/pyDriveWire-playsound/config
+#       cp $HOME/update/start_pyDW.sh $HOME/pyDriveWire-playsound
+#       cp $HOME/update/stop_pyDW.sh $HOME/pyDriveWire-playsound
+#       cp $HOME/update/status_pyDW.sh $HOME/pyDriveWire-playsound
+#       cp $HOME/update/pyDW.sh $HOME/pyDriveWire-playsound
 
-	pypy -m pip install paramiko
-	echo
-	echo "If the paramiko module failed, please contact support for CoCo-Pi in the #coco-pi channel Discord."
-	echo
-	read -p "Press any key to continue... " -n1 -s
-	echo
+#	pypy -m pip install paramiko
+#	echo
+#	echo "If the paramiko module failed, please contact support for CoCo-Pi in the #coco-pi channel Discord."
+#	echo
+#	read -p "Press any key to continue... " -n1 -s
+#	echo
 
-        echo "$fix" >>$file
-        echo Please select pyDriveWire-playsound as the new version to complete fix.  Thank you.
-        echo
-fi
+#       echo "$fix" >>$file
+#       echo Please select pyDriveWire-playsound as the new version to complete fix.  Thank you.
+#       echo
+#fi
 
 echo
 
