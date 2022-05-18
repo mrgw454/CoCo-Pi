@@ -1095,11 +1095,15 @@ else
 	git checkout playsound
 	git pull
 
-	cp $HOMR/update/.pydrivewirerc.playsound $HOME/pyDriveWire-playsound/config/pydrivewirerc-daemon
+	cp $HOME/update/.pydrivewirerc.playsound $HOME/pyDriveWire-playsound/config/pydrivewirerc-daemon
         cp $HOME/update/start_pyDW.sh $HOME/pyDriveWire-playsound
         cp $HOME/update/stop_pyDW.sh $HOME/pyDriveWire-playsound
         cp $HOME/update/status_pyDW.sh $HOME/pyDriveWire-playsound
         cp $HOME/update/pyDW.sh $HOME/pyDriveWire-playsound
+
+	echo
+	echo "This will take some time.  Please be patient."
+	echo
 
 	sudo patch -p1 -d /home/pi/.local/lib/pypy2.7/site-packages/pip/_internal/operations/install <$HOME/update/pygobject-install.patch
 	pypy -m pip install paramiko
@@ -1112,7 +1116,7 @@ else
 	echo
 
         echo "$fix" >>$file
-        echo Please select pyDriveWire-playsound as the new version to complete fix.  Thank you.
+        echo "Please select pyDriveWire-playsound from the Utilities / Drive Emulation Menu as the default version to use."
         echo
 fi
 
