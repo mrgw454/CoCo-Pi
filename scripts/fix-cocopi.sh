@@ -1095,7 +1095,7 @@ else
 	git checkout playsound
 	git pull
 
-        cp $HOME/update/pydrivewirerc-daemon $HOME/pyDriveWire-playsound/config
+	cp $HOMR/update/.pydrivewirerc.playsound $HOME/pyDriveWire-playsound/config/pydrivewirerc-daemon
         cp $HOME/update/start_pyDW.sh $HOME/pyDriveWire-playsound
         cp $HOME/update/stop_pyDW.sh $HOME/pyDriveWire-playsound
         cp $HOME/update/status_pyDW.sh $HOME/pyDriveWire-playsound
