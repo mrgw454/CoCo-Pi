@@ -1062,7 +1062,7 @@ else
 fi
 
 
- add new cmoc package
+# add new cmoc package
 # check for fix
 fix="fix-20220504-01"
 if grep -q "$fix" $file; then
