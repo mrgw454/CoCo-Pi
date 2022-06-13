@@ -1130,9 +1130,14 @@ if grep -q "$fix" $file; then
 else
         echo Applying fix $fix...
         echo
-        cd $HOME/source/mc-10
-	git reset --hard
-	git pull
+        cd $HOME/source
+
+       if [ -d $HOME/source/mc-10 ]
+       then
+       		rm -r -f $HOME/source/mc-10
+       fi
+
+	git clone https://github.com/gregdionne/mc-10.git
 	git checkout cassette
 	git pull
 
