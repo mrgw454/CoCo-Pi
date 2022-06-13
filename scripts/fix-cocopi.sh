@@ -1131,8 +1131,9 @@ else
         echo Applying fix $fix...
         echo
         cd $HOME/source/mc-10
-	git checkout cassette
 	git reset --hard
+	git pull
+	git checkout cassette
 	git pull
 
 	cp $HOME/update/mc10.css $HOME/source/mc-10/MC10
