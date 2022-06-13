@@ -1120,6 +1120,30 @@ else
         echo
 fi
 
+
+# update Greg Dionne's Java MC-10 emulator from git
+# check for fix
+fix="fix-20220612-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        cd $HOME/source/mc-10
+	git checkout cassette
+	git reset --hard
+	git pull
+
+	cp $HOME/update/mc10.css $HOME/source/mc-10/MC10
+
+        echo "$fix" >>$file
+        echo Please restart pyDriveWire to complete fix.  Thank you.
+        echo
+fi
+
+
+
 echo
 
 echo
