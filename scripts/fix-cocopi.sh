@@ -1138,13 +1138,13 @@ else
        fi
 
 	git clone https://github.com/gregdionne/mc-10.git
+	cd $HOME/source/mc-10
 	git checkout cassette
 	git pull
 
 	cp $HOME/update/mc10.css $HOME/source/mc-10/MC10
 
         echo "$fix" >>$file
-        echo Please restart pyDriveWire to complete fix.  Thank you.
         echo
 fi
 
