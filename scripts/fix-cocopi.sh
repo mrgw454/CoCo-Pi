@@ -1149,6 +1149,21 @@ else
 fi
 
 
+# update OVCC to 1.5.1
+# check for fix
+fix="fix-20220617-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        tar xzf /home/pi/update/OVCC-1.5.1-CoCoPi.tar.gz -C /
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
