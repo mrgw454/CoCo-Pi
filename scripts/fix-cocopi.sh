@@ -1164,6 +1164,22 @@ else
 fi
 
 
+# add cocofs disk utility from github
+# check for fix
+fix="fix-20220706-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        tar xzf /home/pi/update/cocofs-20220706.tar.gz -C /
+	sudo cp /home/pi/source/cocofs/cocofs /usr/local/bin
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
