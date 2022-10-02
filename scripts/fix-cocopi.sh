@@ -1209,7 +1209,7 @@ else
         echo
         sudo apt install -y libqt5charts5-dev
 	sudo cp $HOME/update/seergdb /usr/local/bin
-	sudo cp $HOME/update/seergdb.desktop $HOME/desktop
+	sudo cp $HOME/update/seergdb.desktop $HOME/Desktop
 	sudo cp $HOME/update/seergdb /usr/local/bin
         echo "$fix" >>$file
         echo
