@@ -1198,6 +1198,24 @@ else
 fi
 
 
+# add new packages
+# check for fix
+fix="fix-20221002-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        sudo apt install -y libqt5charts5-dev
+	sudo cp $HOME/update/seergdb /usr/local/bin
+	sudo cp $HOME/update/seergdb.desktop $HOME/desktop
+	sudo cp $HOME/update/seergdb /usr/local/bin
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 

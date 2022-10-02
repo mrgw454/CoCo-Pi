@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=seergdb
+Exec=seergdb
+Comment=
+Terminal=false
+Icon=/home/pi/Pictures/seergdb_128x128.png
+Type=Application
