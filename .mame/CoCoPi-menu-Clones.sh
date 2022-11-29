@@ -12,7 +12,8 @@
     "9" "Matra Alice 32" \
     "10" "Matra Alice 90" \
     "11" "Matra Alice 128K (MCX-BASIC)" \
-    "12" "Return to Main Menu" \
+    "12" "Elanco AgVision" \
+    "13" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -29,6 +30,7 @@
         9) alice32.sh;;
        10) alice90.sh;;
        11) alice128.sh;;
-       12) menu;;
+       12) agvision.sh;;
+       13) menu;;
         *) echo "Quitting...";;
     esac
