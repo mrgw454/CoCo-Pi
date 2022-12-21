@@ -13,6 +13,7 @@ options=("Prológica CP400" \
          "Matra Alice 32" \
          "Matra Alice 90" \
          "Matra Alice 128K (MCX-BASIC)" \
+         "Elanco AgVision" \
          "Return to Main Menu")
 
 while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/home/pi/Pictures/CoCo-Pi.png" --text="$prompt" --list  --column=""  "${options[@]}"); do
@@ -30,7 +31,8 @@ while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/hom
     "${options[8]}" ) $HOME/.mame/alice32.sh;;
     "${options[9]}" ) $HOME/.mame/alice90.sh;;
    "${options[10]}" ) $HOME/.mame/alice128.sh;;
-   "${options[11]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
+   "${options[11]}" ) $HOME/.mame/agvision.sh;;
+   "${options[12]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
 
      *) echo "Quitting...";;
     esac
