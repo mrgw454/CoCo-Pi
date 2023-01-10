@@ -46,13 +46,17 @@ fi
 echo Creating EOU IDE based HDD image file...
 cd $HOME/source/eou_ide
 cp /media/share1/EMU/EOU/63SDC.VHD ./
-python ./makebootfileide.py -c 6309 -i $HOME/source/eou_ide/63SDC.VHD
+python ./makebootfileide.py -e mame -c 6309 -i $HOME/source/eou_ide/63SDC.VHD
 
-    if [ -f $HOME/source/eou_ide/63IDE.ide ]
+    if [ -f $HOME/source/eou_ide/build/6309/63IDE.ide ]
     then
     echo
     echo EOU IDE HDD image created successfully for use with XRoar.
     echo
+
+	echo patching for DriveWire support...
+	dd if=$HOME/source/eou_ide/63IDE.dsk.pad of=$HOME/source/eou_ide/build/6309/63IDE.ide bs=512 seek=2 conv=notrunc
+	echo
     fi
 
 cd $HOME/.mame
