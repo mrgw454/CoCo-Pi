@@ -1216,6 +1216,23 @@ else
 fi
 
 
+# add new RVPN programs and remote support capability
+# check for fix
+fix="fix-20230118-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        rm -rf /home/pi/rvpn
+        tar xzf /home/pi/update/cocopi_support-2023-01-18.tar.gz -C /
+	sudo ln -s /home/pi/rvpn/rvpn /usr/local/bin/rvpn
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 echo
 
