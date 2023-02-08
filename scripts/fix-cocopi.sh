@@ -1251,6 +1251,36 @@ else
 fi
 
 
+# update pyDriveWire
+# check for fix
+fix="fix-20230308-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+	cd $HOME
+	cp $HOME/.pydrivewirerc $HOME/.pydrivewirerc.backup
+		
+	git clone https://github.com/n6il/pyDriveWire.git pyDriveWire-git
+	cd $HOME/pyDriveWire-git
+	git checkout master
+	git pull
+
+	cp $HOME/.pydrivewirerc.backup $HOME/.pydrivewirerc
+    cp $HOME/update/start_pyDW.sh $HOME/pyDriveWire-git
+    cp $HOME/update/stop_pyDW.sh $HOME/pyDriveWire-git
+    cp $HOME/update/status_pyDW.sh $HOME/pyDriveWire-git
+    cp $HOME/update/pyDW.sh $HOME/pyDriveWire-git
+
+
+    echo "$fix" >>$file
+    echo "Please select pyDriveWire-git from the Utilities / Drive Emulation Menu as the default version to use."
+    echo
+fi
+
+
 
 echo
 
