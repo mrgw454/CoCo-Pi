@@ -1268,7 +1268,7 @@ else
 	git checkout master
 	git pull
 
-	cp $HOME/.pydrivewirerc.backup $HOME/.pydrivewirerc
+	cp $HOME/.pydrivewirerc.backup $HOME/pyDriveWire-git/config/pydrivewirerc-daemon
     cp $HOME/update/start_pyDW.sh $HOME/pyDriveWire-git
     cp $HOME/update/stop_pyDW.sh $HOME/pyDriveWire-git
     cp $HOME/update/status_pyDW.sh $HOME/pyDriveWire-git
