@@ -1281,6 +1281,36 @@ else
 fi
 
 
+# add ugBasic and supporting components
+# check for fix
+fix="fix-20230308-02"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+    tar xzf /home/pi/update/bison-3.8.2-CoCoPi.tar.gz -C /
+    tar xzf /home/pi/update/ugBasic-git-CoCoPi.tar.gz -C /
+    tar xzf /home/pi/update/geany-filedefs-CoCoPi.tar.gz -C /
+
+	sudo apt -y remove bison libbison-dev
+
+	cd $HOME/source/bison-3.8.2
+	sudo make install
+	
+	cd $HOME/source/ugbasic/ugbc/exe
+	sudo cp ugbc.coco /usr/local/bin
+	sudo cp ugbc.d64 /usr/local/bin
+	sudo cp ugbc.d32 /usr/local/bin
+
+	cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 echo
 
