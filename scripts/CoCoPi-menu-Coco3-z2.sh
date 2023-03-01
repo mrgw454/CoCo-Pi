@@ -17,6 +17,7 @@ options=("Tandy Color Computer 3 DECB" \
          "Tandy Color Computer 3 YA-DOS  w/HDD" \
          "Tandy Color Computer 3 YA-DOS  w/6309,2MB & HDD" \
          "Tandy Color Computer 3 HDB-DOS w/6309,2MB & NitrOS9 EOU (IDE)" \
+         "Tandy Color Computer 3 ECB w/128KB" \
          "Return to Main Menu")
 
 while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/home/pi/Pictures/CoCo-Pi.png" --text="$prompt" --list  --column=""  "${options[@]}"); do
@@ -38,7 +39,8 @@ while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/hom
     "${options[12]}" ) $HOME/.mame/coco3-yados-HD-mpi.sh;;
     "${options[13]}" ) $HOME/.mame/coco3-yados-HD-6309-mpi.sh;;
     "${options[14]}" ) $HOME/.mame/coco3-hdbdos-6309-nitros9-ide.sh;;
-    "${options[15]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
+    "${options[15]}" ) $HOME/.mame/coco3-ecb.sh;;
+    "${options[16]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
      *) echo "Quitting...";;
     esac
 

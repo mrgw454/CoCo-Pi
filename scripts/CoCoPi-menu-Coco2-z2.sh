@@ -13,6 +13,7 @@ options=("TRS-80 Color Computer 2 DECB" \
          "TRS-80 Color Computer 2 HDB-DOS w/PLATO" \
          "TRS-80 Color Computer 2 YA-DOS  w/HDD" \
          "TRS-80 Color Computer 2 YA-DOS  w/6309 & HDD" \
+         "TRS-80 Color Computer 2 ECB w/64KB" \
          "Return to Main Menu")
 
 while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/home/pi/Pictures/CoCo-Pi.png" --text="$prompt" --list  --column=""  "${options[@]}"); do
@@ -30,7 +31,8 @@ while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/hom
     "${options[8]}" ) $HOME/.mame/coco2-hdbdos-pyDW-PLATO.sh;;
     "${options[9]}" ) $HOME/.mame/coco2-yados-HD-mpi.sh;;
     "${options[10]}" ) $HOME/.mame/coco2-yados-HD-6309-mpi.sh;;
-    "${options[11]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
+    "${options[11]}" ) $HOME/.mame/coco2-ecb.sh;;    
+    "${options[12]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
 
      *) echo "Quitting...";;
     esac

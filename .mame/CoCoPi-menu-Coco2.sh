@@ -12,7 +12,8 @@
     "9" "TRS-80 Color Computer 2 HDB-DOS w/PLATO" \
     "10" "TRS-80 Color Computer 2 YA-DOS w/HDD" \
     "11" "TRS-80 Color Computer 2 YA-DOS w/6309 & HDD" \
-    "12" "Return to Main Menu" \
+    "12" "TRS-80 Color Computer 2 ECB w/64KB" \
+    "13" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -29,6 +30,7 @@
         9) coco2-hdbdos-pyDW-PLATO.sh;;
        10) coco2-yados-HD-mpi.sh;;
        11) coco2-yados-HD-6309-mpi.sh;;
-       12) menu;;
+       12) coco2-ecb.sh;;
+       13) menu;;
         *) echo "Quitting...";;
     esac

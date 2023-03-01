@@ -17,7 +17,8 @@
     "14" "Tandy Color Computer 3 YA-DOS w/HDD" \
     "15" "Tandy Color Computer 3 YA-DOS w/6309,2MB & HDD" \
     "16" "Tandy Color Computer 3 HDB-DOS w/6309,2MB & NitrOS9 EOU (IDE)" \
-    "17" "Return to Main Menu" \
+    "17" "Tandy Color Computer 3 ECB w/128KB" \
+    "18" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -28,7 +29,7 @@
         3) coco3-decb-ssc-mpi.sh;;
         4) coco3-decb-gmc-mpi.sh;;
         5) coco3-ecb-gamemaster.sh;;
-	    6) coco3-decb-6309-ORCH90.sh;;
+	6) coco3-decb-6309-ORCH90.sh;;
         7) coco3-decb-term.sh;;
         8) coco3-hdbdos.sh;;
         9) coco3-hdbdos-6309.sh;;
@@ -39,6 +40,7 @@
        14) coco3-yados-HD-mpi.sh;;
        15) coco3-yados-HD-6309-mpi.sh;;
        16) coco3-hdbdos-6309-nitros9-ide.sh;;
-       17) menu;;
+       17) coco3-ecb.sh;;
+       18) menu;;
         *) echo "Quitting...";;
     esac
