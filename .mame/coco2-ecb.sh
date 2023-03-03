@@ -16,7 +16,7 @@ else
 
 fi
 
-    mame coco2 -ramsize 64k -ext '' $MAMEPARMS
+    mame coco2 -ramsize 64k -cart /media/share1/roms/extbas11.rom $MAMEPARMS
 
 # capture MAME ERRORLEVEL
 

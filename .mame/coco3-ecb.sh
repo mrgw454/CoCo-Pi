@@ -17,7 +17,7 @@ else
 
 fi
 
-    mame coco3 -ext '' $MAMEPARMS
+    mame coco3 -cart /media/share1/roms/extbas11.rom $MAMEPARMS
 
 # capture MAME ERRORLEVEL
 
