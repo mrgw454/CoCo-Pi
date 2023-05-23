@@ -1334,6 +1334,42 @@ else
 fi
 
 
+# install autoconf from source and update ugBasic
+# check for fix
+fix="fix-20230523-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+    tar xzf /home/pi/update/autoconf-2.71.tar.gz -C /home/pi/source
+
+	cd $HOME/source/autoconf-2.71
+	./configure
+	make
+	sudo make install
+
+       if [ -d $HOME/source/ugbasic ]
+       then
+       		rm -r -f $HOME/source/ugbasic
+       fi
+
+	tar xzf /home/pi/update/ugBasic-git-20230523-CoCoPi.tar.gz -C /
+
+	cd $HOME/source/ugbasic/ugbc/exe
+	sudo cp ugbc.coco /usr/local/bin
+	sudo cp ugbc.d64 /usr/local/bin
+	sudo cp ugbc.d32 /usr/local/bin
+
+	cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
+
 echo
 
 echo
