@@ -30,10 +30,10 @@ EX_09_LB=Compile assembly program (lwasm)
 EX_09_CM=/usr/bin/lwasm --6809 --decb --output=%d/%e.bin %d/%f
 EX_09_WD=%d
 EX_10_LB=Compile assembly program (asm6809)
-EX_10_CM=/usr/bin/asm6809 --coco --output=%d/%e.bin %d/%f
+EX_10_CM=/usr/local/bin/asm6809 --coco --output=%d/%e.bin %d/%f
 EX_10_WD=%d
 EX_11_LB=Compile C program (CMOC)
-EX_11_CM=/usr/local/bin/cmoc -o %d/%e.bin %d/%f
+EX_11_CM=/usr/bin/cmoc -o %d/%e.bin %d/%f
 EX_11_WD=%d
 EX_12_LB=Create BASIC MC-10 WAV file and launch MAME (local)
 EX_12_CM=$HOME/scripts/makeWAV-mc10.sh mc10 n
@@ -47,3 +47,7 @@ EX_14_WD=%d
 EX_15_LB=Compile MC-10 BASIC program (mcbasic)
 EX_15_CM=$HOME/scripts/compile-BASIC-mc10.sh %d/%f
 EX_15_WD=%d
+EX_16_LB=Compile BASIC program (ugBasic - CoCo)
+EX_16_CM=/usr/local/bin/ugbc.coco -L %d/%e.lst -O bin %d/%e.bas -o %d/%e.bin
+EX_16_CM_WD=%d
+
