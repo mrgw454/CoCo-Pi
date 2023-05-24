@@ -172,6 +172,16 @@ for f in *; do
 	fi
 
 
+# Copy all PNG files for ugBasicA (and convert names to UPPERCASE) to DSK image
+	if [[ $f == *.PNG ]]; then
+
+		echo -e decb copy -2 -b -r "$f" "$floppy.DSK","${f^^}"
+		decb copy -2 -b -r "$f" "$floppy.DSK","${f^^}"
+		functionErrorLevel
+
+	fi
+
+
 done
 
 echo -e
