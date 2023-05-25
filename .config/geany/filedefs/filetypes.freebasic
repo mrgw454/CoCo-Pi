@@ -48,6 +48,8 @@ EX_15_LB=Compile MC-10 BASIC program (mcbasic)
 EX_15_CM=$HOME/scripts/compile-BASIC-mc10.sh %d/%f
 EX_15_WD=%d
 EX_16_LB=Compile BASIC program (ugBasic - CoCo)
-EX_16_CM=/usr/local/bin/ugbc.coco -L %d/%e.lst -O bin %d/%e.bas -o %d/%e.bin
+EX_16_CM=/usr/local/bin/ugbc.coco -L %d/%e.lst -O bin -o %d/%e.bin %d/%e.bas
 EX_16_CM_WD=%d
-
+EX_17_LB=Compile BASIC program & build DSK image (ugBasic - CoCo)
+EX_17_CM=/usr/local/bin/ugbc.coco -O dsk %d/%e.bas -o %d/%e.dsk
+EX_17_CM_WD=%d
