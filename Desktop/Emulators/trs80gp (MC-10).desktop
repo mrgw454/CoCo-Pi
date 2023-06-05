@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=trs80gp (MC-10)
+Exec=trs80gp -mc10
+Comment=
+Terminal=false
+Icon=/home/pi/Pictures/trs80gp-mc10.png
+Type=Application
+Path=/home/pi/.trs80gp

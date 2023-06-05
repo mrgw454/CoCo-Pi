@@ -1387,6 +1387,24 @@ else
 fi
 
 
+# add trs80gp emulator
+# check for fix
+fix="fix-20230605-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	sudo cp $HOME/update/trs80gp /usr/local/bin
+	sudo chmod a+x /usr/local/bin/trs80gp
+
+	tar xvf $HOME/update/trs80gp.tar.gz -C /
+	
+	echo "$fix" >>$file
+fi
+
+
 
 echo
 

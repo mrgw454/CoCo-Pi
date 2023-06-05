@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=trs80gp (Color Computer)
+Exec=trs80gp -mc
+Comment=
+Terminal=false
+Icon=/home/pi/Pictures/trs80gp-mc.png
+Type=Application
+Path=/home/pi/.trs80gp
