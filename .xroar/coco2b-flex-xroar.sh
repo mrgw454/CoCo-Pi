@@ -7,7 +7,7 @@ export XROARPARMS=$XROARPARMSFILE
 
 clear
 
-xroar -c $HOME/.xroar/xroar.conf -default-machine coco2bus -load /media/share1/EMU/FLEX/fhl_flex_5_0_4.DMK /media/share1/EMU/FLEX/tsc_extended_basic.DMK $XROARPARMS
+xroar -c $HOME/.xroar/xroar.conf -default-machine coco2bus -load /media/share1/EMU/FLEX/fhl_flex_5_0_4.DMK -load /media/share1/EMU/FLEX/tsc_extended_basic.DMK $XROARPARMS
 
 # capture XRoar ERRORLEVEL
 
