@@ -13,6 +13,7 @@ options=("TRS-80 Color Computer 2 DECB" \
          "TRS-80 Color Computer 2 w/GMC & ROM image" \
          "TRS-80 Color Computer 2 w/GMC & DSK image" \
          "TRS-80 Color Computer 2 HDB-DOS w/PLATO" \
+         "TRS-80 Color Computer 2 w/FLEX"\
          "Return to Main Menu")
 
 while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/home/pi/Pictures/CoCo-Pi.png" --text="$prompt" --list  --column=""  "${options[@]}"); do
@@ -30,7 +31,8 @@ while opt=$(zenity --width=640 --height=480 --title="$title" --window-icon="/hom
     "${options[8]}" ) $HOME/.xroar/coco2b-GMC-ROM-xroar.sh;;
     "${options[9]}" ) $HOME/.xroar/coco2b-GMC-FLOPPY-xroar.sh;;
     "${options[10]}" ) $HOME/.xroar/coco2b-hdbdos-pyDW-PLATO-xroar.sh;;
-    "${options[11]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
+    "${options[11]}" ) $HOME/.xroar/coco2b-flex-xroar.sh;;
+    "${options[12]}" ) $HOME/scripts/menu-z2.sh & kill $$;;
 
      *) echo "Quitting...";;
     esac

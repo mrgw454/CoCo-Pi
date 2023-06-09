@@ -1428,6 +1428,22 @@ else
 fi
 
 
+# add Frank Hogg's Color FLEX option for XRoar
+# check for fix
+fix="fix-20230609-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+    tar xzf /home/pi/update/color-flex-5.0.4-frank-hogg-laboratory.tar.gz -C /
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 echo
 
