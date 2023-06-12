@@ -13,7 +13,8 @@
     "10" "TRS-80 Color Computer 2 YA-DOS w/HDD" \
     "11" "TRS-80 Color Computer 2 YA-DOS w/6309 & HDD" \
     "12" "TRS-80 Color Computer 2 ECB w/64KB" \
-    "13" "Return to Main Menu" \
+    "13" "TRS-80 Color Computer 2 w/FLEX" \
+    "14" "Return to Main Menu" \
     3>&1 1>&2 2>&3)
 
     # Below you can enter the corresponding commands
@@ -31,6 +32,7 @@
        10) coco2-yados-HD-mpi.sh;;
        11) coco2-yados-HD-6309-mpi.sh;;
        12) coco2-ecb.sh;;
-       13) menu;;
+       13) coco2-flex.sh;;
+       14) menu;;
         *) echo "Quitting...";;
     esac
