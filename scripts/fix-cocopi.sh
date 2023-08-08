@@ -1522,7 +1522,7 @@ if grep -q "$fix" $file; then
 else
     echo Applying fix $fix...
     echo
-    tar xzf /home/pi/update/ugBasic-git-20230707-CoCoPi.tar.gz -C /
+    tar xzf /home/pi/update/ugBasic-git-20230807-CoCoPi.tar.gz -C /
 
         cd $HOME/source/ugbasic/ugbc/exe
         sudo cp ugbc.coco /usr/local/bin
