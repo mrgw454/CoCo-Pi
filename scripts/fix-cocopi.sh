@@ -1554,6 +1554,40 @@ else
 fi
 
 
+# add new FreeBASIC and QB64 packages
+# check for fix
+fix="fix-20230825-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+
+        if [ -d $HOME/source/fbc ]
+        then
+                rm -r -f $HOME/source/fbc
+        fi
+
+        tar xvf $HOME/update/FreeBASIC-git-20230825-CoCoPi.tar.gz -C /
+        cd $HOME/source/fbc
+        sudo make install
+
+
+        if [ -d $HOME/source/qb64-git ]
+        then
+                rm -r -f $HOME/source/qb64-git
+        fi
+
+        tar xvf $HOME/update/QB64-git-20230825-CoCoPi.tar.gz -C /
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
+
+
 echo
 
 echo
