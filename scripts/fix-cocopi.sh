@@ -1596,7 +1596,7 @@ else
 	echo Applying fix $fix...
 	echo
 
-	sudo unzip -j $HOME/update/trs80gp-2.5.1.zip rpi-32/trs80gp -d /usr/local/bin
+	sudo unzip -j -o $HOME/update/trs80gp-2.5.1.zip rpi-32/trs80gp -d /usr/local/bin
 	sudo chmod a+x /usr/local/bin/trs80gp
 
 	echo "$fix" >>$file
