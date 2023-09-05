@@ -1621,6 +1621,48 @@ else
 fi
 
 
+# update tasm6801 and mcbasic compiler
+# check for fix
+fix="fix-20230905-03"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+
+	if [ "$RPI" == "3 M" ]; then
+
+        	sudo cp $HOME/update/mcbasic-20230905 /usr/local/bin/mcbasic
+        	sudo cp $HOME/update/tasm6801-20230905 /usr/local/bin/tasm6801
+
+	else
+
+        	cd /home/pi/source/tasm6801
+        	rm src/tasm6801
+        	git pull
+        	cd src
+        	make clean
+        	make
+        	cd ..
+        	sudo cp tasm6801 /usr/local/bin
+
+        	cd /home/pi/source/mcbasic
+        	rm mcbasic
+			make clean
+        	git reset --hard
+			git pull
+        	cd src
+        	make
+        	cd ..
+        	sudo cp mcbasic /usr/local/bin
+	fi
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 
 echo
