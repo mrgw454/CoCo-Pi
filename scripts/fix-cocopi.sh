@@ -1603,6 +1603,24 @@ else
 fi
 
 
+# add new cmoc package
+# check for fix
+fix="fix-20230905-02"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+        tar xvf $HOME/update/cmoc-0.1.85-CoCoPi.tar.gz -C /
+        cd $HOME/source/cmoc-0.1.85
+		sudo make install
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 
 echo
