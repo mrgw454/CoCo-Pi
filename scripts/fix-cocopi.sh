@@ -1586,6 +1586,23 @@ else
 fi
 
 
+# add trs80gp emulator
+# check for fix
+fix="fix-20230905-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+
+	sudo unzip -j $HOME/update/trs80gp-2.5.1.zip rpi-32/trs80gp -d /usr/local/bin
+	sudo chmod a+x /usr/local/bin/trs80gp
+
+	echo "$fix" >>$file
+fi
+
+
 
 
 echo
