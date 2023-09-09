@@ -1686,6 +1686,25 @@ else
 fi
 
 
+# update tasm6801 and mcbasic compiler
+# check for fix
+fix="fix-20230909-01"
+if grep -q "$fix" $file; then
+        echo fix $fix already complete.
+        echo
+else
+        echo Applying fix $fix...
+        echo
+
+		tar xzf /home/pi/update/mcbasic-tasm6801-git-20230909-CoCoPi.tar.gz -C /
+       	sudo cp /home/pi/source/mcbasic/mcbasic /usr/local/bin
+       	sudo cp /home/pi/source/tasm6801/tasm6801 /usr/local/bin
+
+        echo "$fix" >>$file
+        echo
+fi
+
+
 
 
 echo
