@@ -1705,6 +1705,29 @@ else
 fi
 
 
+# update ugBasic
+# check for fix
+fix="fix-20230911-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo 
+else
+    echo Applying fix $fix...
+    echo
+    tar xzf /home/pi/update/ugBasic-git-20230911-CoCoPi.tar.gz -C /
+
+        cd $HOME/source/ugbasic/ugbc/exe
+        sudo cp ugbc.coco /usr/local/bin
+        sudo cp ugbc.d64 /usr/local/bin
+        sudo cp ugbc.d32 /usr/local/bin
+
+        cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 
 echo
