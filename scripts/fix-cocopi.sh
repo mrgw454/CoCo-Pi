@@ -1763,9 +1763,10 @@ else
     tar xzf /home/pi/update/ugBasic-beta-git-20231006-CoCoPi.tar.gz -C /
 
         cd $HOME/source/ugbasic-beta/ugbc/exe
-        sudo cp ugbc.coco /usr/local/bin
-        sudo cp ugbc.d64 /usr/local/bin
-        sudo cp ugbc.d32 /usr/local/bin
+        sudo cp ugbc.coco.beta /usr/local/bin
+        sudo cp ugbc.coco3.beta /usr/local/bin
+        sudo cp ugbc.d64.beta /usr/local/bin
+        sudo cp ugbc.d32.beta /usr/local/bin
 
         cd $HOME
 
