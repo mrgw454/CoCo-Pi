@@ -1775,6 +1775,27 @@ else
 fi
 
 
+# update CC6303 compiler
+# check for fix
+fix="fix-20231010-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo 
+else
+    echo Applying fix $fix...
+    echo
+    
+    rm -r -f $HOME/source/CC6303
+    tar xzf /home/pi/update/CC6303-git-20231010-CoCoPi.tar.gz -C /
+    cd $HOME/source/CC6303
+    sudo make install
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 
 echo
