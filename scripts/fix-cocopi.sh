@@ -1820,6 +1820,30 @@ else
 fi
 
 
+# update ugBasic-beta
+# check for fix
+fix="fix-20231020-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo 
+else
+    echo Applying fix $fix...
+    echo
+    tar xzf /home/pi/update/ugBasic-beta-git-20231020-CoCoPi.tar.gz -C /
+
+        cd $HOME/source/ugbasic-beta/ugbc/exe
+        sudo cp ugbc.coco.beta /usr/local/bin
+        sudo cp ugbc.coco3.beta /usr/local/bin
+        sudo cp ugbc.d64.beta /usr/local/bin
+        sudo cp ugbc.d32.beta /usr/local/bin
+
+        cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 
 echo
