@@ -1,0 +1,23 @@
+{
+  "mame": {
+    "version": "0.289",
+    "file": "packages/mame/mameCoCoPi-0.289-crosstool-NG-1.deb",
+    "binary": "/opt/mame-0.289/mame",
+    "sha256": "379d3d6dd5cb2a91ac3427339af6819ab0a6f6e961fc255957185d88db63f7c6",
+    "url": "https://downloads.coco-pi.net/coco-pi/updates/packages/mameCoCoPi-0.289-crosstool-NG-1.deb"
+  },
+  "xroar": {
+    "version": "1.12.1",
+    "file": "packages/xroar/xroarCoCoPi-1.12.1-1.deb",
+    "binary": "/usr/local/bin/xroar-1.12.1",
+    "sha256": "31db1eb3d1ddeb0ea2a607e751c4e9f8cdec36f406f72263ccfb940de191fa5d",
+    "url": "https://downloads.coco-pi.net/coco-pi/updates/packages/xroarCoCoPi-1.12.1-1.deb"
+  },
+  "xroar-ai": {
+    "version": "1.13.0~git80dc8116",
+    "file": "packages/xroar-ai/xroarAICoCoPi-1.13.0-git80dc8116-1.deb",
+    "binary": "/usr/local/bin/xroar-ai-80dc8116",
+    "sha256": "15b53a593484add1b3536fb64540f701e245ac080b43fc4e2d9e9f80b937dccc",
+    "url": "https://downloads.coco-pi.net/coco-pi/updates/packages/xroarAICoCoPi-1.13.0-git80dc8116-1.deb"
+  }
+}

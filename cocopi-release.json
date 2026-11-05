@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "sequence": 2026110507,
+  "name": "CoCo-Pi - Community Edition 2026.11 RC5 (2026-11-05)",
+  "launcher_revision": "ea15465dfa72bb81be3cf016c5a759291eb40186",
+  "update_repository": "https://github.com/mrgw454/CoCo-Pi",
+  "update_branch": "main",
+  "payloads": {
+    "scripts.tar.gz": "e202046beb5942331cbfba00d67542eaa2f2de1b312919af82f750dfc0105c85",
+    "source.tar.gz": "ebb7988de2a0e0dd56562dddf3ed93f4be593ea85dc1c6cb2fed8b36737764e7"
+  },
+  "downloads": {
+    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110507/scripts.tar.gz",
+    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110507/source.tar.gz"
+  },
+  "changes": [
+    "Use the dedicated CoCo-Pi public update channel; general Installer remains separate.",
+    "Include TNFS v26.1015.1 build/install support and reliable Start/Status/Stop controls.",
+    "Show update changes, retain numbered fixes, and keep completed-update and versioned rollback records."
+  ],
+  "fixes": [
+    {
+      "id": "fix-20261105-01",
+      "description": "Install verified TNFS v26.1015.1 if missing or incomplete; no reboot needed.",
+      "script": "scripts/cocopi-fixes/install-tnfs.sh",
+      "sha256": "2aa26811f9693abb4570723215d2c1bfea30ef729518c10da470dd5e6e8a2e5d"
+    }
+  ]
+}
