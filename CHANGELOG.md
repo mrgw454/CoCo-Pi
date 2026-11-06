@@ -1,5 +1,21 @@
 # CoCo-Pi updates
 
+## 2026110603 — MCX128 firmware and curated builders — 2026-11-06
+
+Run **Apply CoCo-Pi Fixes**. New `fix-20261106-03` prepares the verified16KB
+MCX128 raw ROM for XRoar from ROM files you already downloaded. It preserves
+MAME ZIPs and existing custom raw ROM files. If ROMs have not been downloaded,
+the optional step is deferred and a future DownloadROMs run prepares it.
+
+The MC-10 MCX128 entry should show its boot menu. Choose1 or2 and allow
+initialization before typing BASIC commands. No emulator rebuild, reboot or
+SD card reflash is required. The Launcher audit detects ZIP-only firmware gaps.
+
+The manual `make-ALL-packages.sh` includes stable ugBASIC and PL/M-09 and selects
+BASIC-To-6809 for ARM64 or x86_64. Optional omitted builders remain optional;
+the optional RAMCHK64 helper has a corrected prerequisite message. Earlier
+TNFS/printer/development-tool fixes remain recognized when already complete.
+
 ## 2026110601 — RC6 numbered additions — 2026-11-06
 
 Run **Apply CoCo-Pi Fixes**; leave the terminal open until it finishes.

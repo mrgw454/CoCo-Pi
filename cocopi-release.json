@@ -1,23 +1,23 @@
 {
   "schema": 1,
-  "sequence": 2026110601,
-  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-06 update 1)",
-  "launcher_revision": "480d9e04bb6f10cf1196f71d5adab0b5290f2a14",
+  "sequence": 2026110603,
+  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-06 update 3)",
+  "launcher_revision": "4478fa067ecd94842b50463e32c65eefb3ade902",
   "update_repository": "https://github.com/mrgw454/CoCo-Pi",
   "update_branch": "main",
   "payloads": {
-    "scripts.tar.gz": "f5ad910e98e46afbd72dedf575101a65cf8d553d9b7dcb1a2b0f48ca9bf50edf",
-    "source.tar.gz": "05decef30ae9060ebd365144f777e547c133a8ea80adba1f494f1652b52bbbe0"
+    "scripts.tar.gz": "c26f723d043ae57c674fdda92e9dec4a4a0f61a768ec88ccd1d233df5a76fb1c",
+    "source.tar.gz": "ae0ad10328ebd8191781d611545851fdeca378287b00c9e8defed4a121fa823e"
   },
   "downloads": {
-    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110601/scripts.tar.gz",
-    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110601/source.tar.gz"
+    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110603/scripts.tar.gz",
+    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110603/source.tar.gz"
   },
   "changes": [
-    "Disable unwanted USB printer auto-setup through a numbered fix; manual CUPS printing remains available.",
-    "Add tested MC6801 tools v1.2.0 and PL/M-09 0.4.2 build/install helpers and a numbered installation fix.",
-    "Run native regression checks, record installed-file provenance, preserve prior sources and keep the existing sim6809 command.",
-    "No reboot or SD card reflash required; Apply CoCo-Pi Fixes installs the two new fixes."
+    "Prepare already-downloaded, verified MCX128 firmware for XRoar; keep MAME ZIPs and existing raw ROMs.",
+    "DownloadROMs prepares the XRoar MCX128 raw image automatically; the Launcher audit detects ZIP-only firmware gaps.",
+    "Refresh the curated manual batch script: stable ugBASIC, PL/M-09 and architecture-specific BASIC-To-6809 selection; optional builders stay optional.",
+    "Apply CoCo-Pi Fixes adds fix-20261106-03. Prior TNFS/printer/tool fixes are skipped when complete. No new SD image or reboot required."
   ],
   "fixes": [
     {
@@ -37,6 +37,12 @@
       "description": "Build/install MC6801 tools v1.2.0 and PL/M-09 0.4.2 with regression checks; preserve existing sim6809.",
       "script": "scripts/cocopi-fixes/install-retrotinker-tools.sh",
       "sha256": "308857b2678088cd8dd9fba414838043f4884616a5d0bc269a94f483662b3388"
+    },
+    {
+      "id": "fix-20261106-03",
+      "description": "Prepare verified, already-downloaded MCX128 firmware for XRoar; preserve MAME ZIPs and custom raw ROMs. No reboot needed.",
+      "script": "scripts/cocopi-fixes/prepare-mcx128-rom.sh",
+      "sha256": "03cb277e0d98956ce7c700b05f473d417644b3fec35d6cc3f70837e8bc0c5b13"
     }
   ]
 }
