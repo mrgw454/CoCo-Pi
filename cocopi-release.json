@@ -1,22 +1,23 @@
 {
   "schema": 1,
-  "sequence": 2026110507,
-  "name": "CoCo-Pi - Community Edition 2026.11 RC5 (2026-11-05)",
-  "launcher_revision": "ea15465dfa72bb81be3cf016c5a759291eb40186",
+  "sequence": 2026110508,
+  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-05)",
+  "launcher_revision": "fa7e7bb1185ba725312995d948a47c7c95afae5a",
   "update_repository": "https://github.com/mrgw454/CoCo-Pi",
   "update_branch": "main",
   "payloads": {
-    "scripts.tar.gz": "e202046beb5942331cbfba00d67542eaa2f2de1b312919af82f750dfc0105c85",
-    "source.tar.gz": "ebb7988de2a0e0dd56562dddf3ed93f4be593ea85dc1c6cb2fed8b36737764e7"
+    "scripts.tar.gz": "0a89253f7f2789be2a31c996d66e78bb72f7bf32ddd1d063be1932ec1823e784",
+    "source.tar.gz": "3525dfb57f0116902d7fa51fe6ab358594a301fcda07bc0c0f093e87cdf83ded"
   },
   "downloads": {
-    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110507/scripts.tar.gz",
-    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110507/source.tar.gz"
+    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110508/scripts.tar.gz",
+    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110508/source.tar.gz"
   },
   "changes": [
-    "Use the dedicated CoCo-Pi public update channel; general Installer remains separate.",
-    "Include TNFS v26.1015.1 build/install support and reliable Start/Status/Stop controls.",
-    "Show update changes, retain numbered fixes, and keep completed-update and versioned rollback records."
+    "Refresh stable ugBASIC, ToolShed and CMOC build scripts with separate staging and version pins.",
+    "Prefer validated Linux ARM64 BASIC-To-6809 prebuilt packages with matching libraries and maintained helper tools.",
+    "Build QB64pe 4.7.0-GLFW natively on Linux ARM64 without changing desktop menus.",
+    "This component update refreshes build scripts; the RC6 SD image also includes the tested native development tools."
   ],
   "fixes": [
     {

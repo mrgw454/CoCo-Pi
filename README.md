@@ -26,7 +26,8 @@ python3 ~/scripts/update-cocopi.py --check
 
 Completed updates: `~/update/cocopi-updates.jsonl`. Numbered fixes:
 `~/update/cocopi-fixes.txt`. Versioned runtime backups: `~/update/rollback/`.
-These backups do not undo OS package changes. See [CHANGELOG.md](CHANGELOG.md).
+These backups do not undo OS package changes. Build-script updates do not
+automatically rebuild installed compilers; see [CHANGELOG.md](CHANGELOG.md).
 Raspberry Pi OS updates remain separate: `sudo apt update` and
 `sudo apt full-upgrade`. Save work and reboot when an OS update requires it.
 
