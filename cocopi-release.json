@@ -1,23 +1,23 @@
 {
   "schema": 1,
-  "sequence": 2026110508,
-  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-05)",
-  "launcher_revision": "fa7e7bb1185ba725312995d948a47c7c95afae5a",
+  "sequence": 2026110601,
+  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-06 update 1)",
+  "launcher_revision": "480d9e04bb6f10cf1196f71d5adab0b5290f2a14",
   "update_repository": "https://github.com/mrgw454/CoCo-Pi",
   "update_branch": "main",
   "payloads": {
-    "scripts.tar.gz": "0a89253f7f2789be2a31c996d66e78bb72f7bf32ddd1d063be1932ec1823e784",
-    "source.tar.gz": "3525dfb57f0116902d7fa51fe6ab358594a301fcda07bc0c0f093e87cdf83ded"
+    "scripts.tar.gz": "f5ad910e98e46afbd72dedf575101a65cf8d553d9b7dcb1a2b0f48ca9bf50edf",
+    "source.tar.gz": "05decef30ae9060ebd365144f777e547c133a8ea80adba1f494f1652b52bbbe0"
   },
   "downloads": {
-    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110508/scripts.tar.gz",
-    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110508/source.tar.gz"
+    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110601/scripts.tar.gz",
+    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110601/source.tar.gz"
   },
   "changes": [
-    "Refresh stable ugBASIC, ToolShed and CMOC build scripts with separate staging and version pins.",
-    "Prefer validated Linux ARM64 BASIC-To-6809 prebuilt packages with matching libraries and maintained helper tools.",
-    "Build QB64pe 4.7.0-GLFW natively on Linux ARM64 without changing desktop menus.",
-    "This component update refreshes build scripts; the RC6 SD image also includes the tested native development tools."
+    "Disable unwanted USB printer auto-setup through a numbered fix; manual CUPS printing remains available.",
+    "Add tested MC6801 tools v1.2.0 and PL/M-09 0.4.2 build/install helpers and a numbered installation fix.",
+    "Run native regression checks, record installed-file provenance, preserve prior sources and keep the existing sim6809 command.",
+    "No reboot or SD card reflash required; Apply CoCo-Pi Fixes installs the two new fixes."
   ],
   "fixes": [
     {
@@ -25,6 +25,18 @@
       "description": "Install verified TNFS v26.1015.1 if missing or incomplete; no reboot needed.",
       "script": "scripts/cocopi-fixes/install-tnfs.sh",
       "sha256": "2aa26811f9693abb4570723215d2c1bfea30ef729518c10da470dd5e6e8a2e5d"
+    },
+    {
+      "id": "fix-20261106-01",
+      "description": "Disable automatic USB printer setup; retain CUPS and manual printing. No reboot needed.",
+      "script": "scripts/cocopi-fixes/disable-usb-printer-autosetup.sh",
+      "sha256": "4192772cc7b1eedc7d1466e14ea908f3a6e9d08cfd87404719591a34e9948171"
+    },
+    {
+      "id": "fix-20261106-02",
+      "description": "Build/install MC6801 tools v1.2.0 and PL/M-09 0.4.2 with regression checks; preserve existing sim6809.",
+      "script": "scripts/cocopi-fixes/install-retrotinker-tools.sh",
+      "sha256": "308857b2678088cd8dd9fba414838043f4884616a5d0bc269a94f483662b3388"
     }
   ]
 }

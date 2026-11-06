@@ -1,5 +1,24 @@
 # CoCo-Pi updates
 
+## 2026110601 — RC6 numbered additions — 2026-11-06
+
+Run **Apply CoCo-Pi Fixes**; leave the terminal open until it finishes.
+No reboot or SD card reflash is required.
+
+- `fix-20261106-01` disables unwanted automatic USB printer setup while
+  preserving CUPS and manual printing. Restore automatic setup with
+  `sudo systemctl unmask configure-printer@.service`; a later Apply Fixes run
+  will enforce the disabled default again.
+- `fix-20261106-02` installs MC6801 tools v1.2.0 and PL/M-09 0.4.2 with
+  native regression checks, manuals/runtime hooks and recorded provenance.
+  Commands include `as01`, `ld01`, `ar01`, `objdump01`, `objcopy01`, `nm01`,
+  `size01`, `plmc`, `srec2flex` and `plm09-sim6809`. An existing unrelated
+  `sim6809` command is preserved. Previous source trees are retained as backups.
+- Reusable build helpers are in `~/source/make-mc6801-tools.sh` and
+  `~/source/make-plm09.sh`; use `--help` for separate staging/prefix options.
+- The earlier TNFS fix is skipped when already complete. New fixes arrive via
+  the update menu; the original RC6 SD archive remains unchanged.
+
 ## 2026110508 — Community Edition 2026.11 RC6 — 2026-11-05
 
 - Updated native build scripts for stable ugBASIC1.18.1, ToolShed2.6.1,
