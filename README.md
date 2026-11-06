@@ -7,6 +7,8 @@ BMCoCo-Pi bare-metal project.
 **Website, image downloads and user guide:** [coco-pi.net](https://coco-pi.net/).
 See the [CoCo-Pi guide](https://coco-pi.net/docs/coco-pi/user-guide) for setup,
 ROM acquisition, optional downloads, VS Code and everyday use.
+Read the [changelog and numbered fixes](https://coco-pi.net/docs/coco-pi/changelog)
+for release changes and fix-specific instructions.
 
 This small repository provides the public update channel. Runtime archives and
 selected emulator packages are hosted on downloads.coco-pi.net; their SHA256
