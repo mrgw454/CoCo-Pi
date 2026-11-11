@@ -1,1 +1,1 @@
-CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-11 CHDX update)
+CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-11 YA-DOS ROM correction)

@@ -1,5 +1,20 @@
 # CoCo-Pi updates
 
+## 2026111102 — YA-DOS ROM correction — 2026-11-11
+
+Run **Apply CoCo-Pi Fixes**. The initial CHDX update requested
+`yados-0.5d.rom`, but the previous ROM archive supplied only an older
+`yados.rom`. This could leave CoCo3 at BASIC or CoCo2 with an unusable screen.
+
+Fix `fix-20261111-01` updates the shipped ROM download setting and installs
+verified YA-DOS 0.5D when ROMs were already downloaded. It preserves the old
+ROMs and backs up the setting. Custom firmware/settings are preserved and
+reported for manual attention. If ROMs were not downloaded, **Download ROMs**
+now supplies 0.5D. **Update CHDX HDD** also prepares the required firmware.
+
+No HDD redownload, MPI change, reboot or SD-card reflash is needed.
+[CHDX setup and recovery](https://coco-pi.net/docs/coco-pi/chdx).
+
 ## 2026111101 — CHDX hard-drive browser — 2026-11-11
 
 Choose **Update CoCo-Pi Launcher and Build Scripts**, then reopen the Launcher.

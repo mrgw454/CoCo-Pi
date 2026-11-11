@@ -1,22 +1,22 @@
 {
   "schema": 1,
-  "sequence": 2026111101,
-  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-11 CHDX update)",
-  "launcher_revision": "60cd88913b8a8c3ec26b9312cc7b3bd70e3fa70d",
+  "sequence": 2026111102,
+  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-11 YA-DOS ROM correction)",
+  "launcher_revision": "47d16badc1c5eeb1ac8b6c46d72d01b51b0026ee",
   "update_repository": "https://github.com/mrgw454/CoCo-Pi",
   "update_branch": "main",
   "payloads": {
-    "scripts.tar.gz": "b5c4dfd4bf6f6c767bb801769bc20ee0125c478b3ff4a75016812073418cc202",
-    "source.tar.gz": "fb19b45812f4f92feebfdff00f33931219828f64e63aeddcbb681fe27d0272c2"
+    "scripts.tar.gz": "5e2acd4f4f9b5c967ef6e81a4967ece2826016b2f66e2cffdf4979b84801e2ae",
+    "source.tar.gz": "afb64ffdd570896fb90da33fab66db8acb2e41c521a42d7388496f8791dccb4f"
   },
   "downloads": {
-    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111101/scripts.tar.gz",
-    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111101/source.tar.gz"
+    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111102/scripts.tar.gz",
+    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111102/source.tar.gz"
   },
   "changes": [
-    "Replace the seven legacy YA-DOS HDD menu entries with CHDX 0.1.0 for CoCo2/CoCo3 in MAME and XRoar.",
-    "Install the optional matched 3280-disk CHDX library through Maintenance: Update Utilities > Update CHDX HDD (CoCo HD Explorer). YA-DOS 0.5D ROM remains separate; no DriveWire server is needed.",
-    "Legacy HDD files are preserved; customized CHDX images are backed up before replacement. No SD image reflash or reboot is required."
+    "Correct the missing yados-0.5d.rom dependency in the initial CHDX update. The updated optional ROM archive includes verified YA-DOS 0.5D.",
+    "Apply CoCo-Pi Fixes adds fix-20261111-01: migrate the shipped ROM download setting and install only missing YA-DOS 0.5D when ROMs were already downloaded. Existing ROMs and custom settings are preserved.",
+    "Future Download ROMs includes 0.5D; Update CHDX HDD also prepares it. No HDD redownload, MPI change, reboot or SD-card reflash is required."
   ],
   "fixes": [
     {
@@ -42,6 +42,12 @@
       "description": "Prepare verified, already-downloaded MCX128 firmware for XRoar; preserve MAME ZIPs and custom raw ROMs. No reboot needed.",
       "script": "scripts/cocopi-fixes/prepare-mcx128-rom.sh",
       "sha256": "03cb277e0d98956ce7c700b05f473d417644b3fec35d6cc3f70837e8bc0c5b13"
+    },
+    {
+      "id": "fix-20261111-01",
+      "description": "Add verified YA-DOS 0.5D for CHDX; update the shipped ROM download setting and preserve existing ROMs. No reboot needed.",
+      "script": "scripts/cocopi-fixes/prepare-yados-rom.sh",
+      "sha256": "2c76f87601fe1b70e80b4d32192a2b4224904987ecbc97701dd701bd519b0bc5"
     }
   ]
 }
