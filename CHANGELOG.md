@@ -1,5 +1,18 @@
 # CoCo-Pi updates
 
+## 2026111101 — CHDX hard-drive browser — 2026-11-11
+
+Choose **Update CoCo-Pi Launcher and Build Scripts**, then reopen the Launcher.
+The seven CoCo2/CoCo3 YA-DOS HDD choices now use CHDX 0.1.0 in MAME and XRoar.
+Choose **Update CHDX HDD (CoCo HD Explorer)** to install the optional matched
+3,280-disk library. YA-DOS 0.5D ROM is separate; DriveWire is not required.
+
+Browse titles, switch title/number order, search prefixes and run BASIC/BIN
+programs. Legacy HDDs are preserved; customized CHDX images are backed up
+before replacement. The catalog must be rebuilt after library changes. No
+reboot or SD-card reflash is needed, and no new numbered system fix is added.
+[Setup and controls](https://coco-pi.net/docs/coco-pi/chdx).
+
 ## 2026110603 — MCX128 firmware and curated builders — 2026-11-06
 
 Run **Apply CoCo-Pi Fixes**. New `fix-20261106-03` prepares the verified16KB

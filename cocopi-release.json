@@ -1,23 +1,22 @@
 {
   "schema": 1,
-  "sequence": 2026110603,
-  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-06 update 3)",
-  "launcher_revision": "4478fa067ecd94842b50463e32c65eefb3ade902",
+  "sequence": 2026111101,
+  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-11 CHDX update)",
+  "launcher_revision": "60cd88913b8a8c3ec26b9312cc7b3bd70e3fa70d",
   "update_repository": "https://github.com/mrgw454/CoCo-Pi",
   "update_branch": "main",
   "payloads": {
-    "scripts.tar.gz": "c26f723d043ae57c674fdda92e9dec4a4a0f61a768ec88ccd1d233df5a76fb1c",
-    "source.tar.gz": "ae0ad10328ebd8191781d611545851fdeca378287b00c9e8defed4a121fa823e"
+    "scripts.tar.gz": "b5c4dfd4bf6f6c767bb801769bc20ee0125c478b3ff4a75016812073418cc202",
+    "source.tar.gz": "fb19b45812f4f92feebfdff00f33931219828f64e63aeddcbb681fe27d0272c2"
   },
   "downloads": {
-    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110603/scripts.tar.gz",
-    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026110603/source.tar.gz"
+    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111101/scripts.tar.gz",
+    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111101/source.tar.gz"
   },
   "changes": [
-    "Prepare already-downloaded, verified MCX128 firmware for XRoar; keep MAME ZIPs and existing raw ROMs.",
-    "DownloadROMs prepares the XRoar MCX128 raw image automatically; the Launcher audit detects ZIP-only firmware gaps.",
-    "Refresh the curated manual batch script: stable ugBASIC, PL/M-09 and architecture-specific BASIC-To-6809 selection; optional builders stay optional.",
-    "Apply CoCo-Pi Fixes adds fix-20261106-03. Prior TNFS/printer/tool fixes are skipped when complete. No new SD image or reboot required."
+    "Replace the seven legacy YA-DOS HDD menu entries with CHDX 0.1.0 for CoCo2/CoCo3 in MAME and XRoar.",
+    "Install the optional matched 3280-disk CHDX library through Maintenance: Update Utilities > Update CHDX HDD (CoCo HD Explorer). YA-DOS 0.5D ROM remains separate; no DriveWire server is needed.",
+    "Legacy HDD files are preserved; customized CHDX images are backed up before replacement. No SD image reflash or reboot is required."
   ],
   "fixes": [
     {
