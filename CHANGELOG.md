@@ -1,5 +1,23 @@
 # CoCo-Pi updates
 
+## 2026111103 — bcc09 terminal development tools — 2026-11-11
+
+Run **Apply CoCo-Pi Fixes** to install John Linville's bcc09 0.11.0 through
+`fix-20261111-02`. Leave the terminal open while the compiler builds and runs
+its checks. Then use `bcc09` in a terminal or VS Code's integrated terminal.
+
+Companion tools are named `bcc09-as09`, `bcc09-ld09`, `bcc09-ar09`,
+`bcc09-objdump09`, `bcc09-objcopy09`, `bcc09-nm09` and `bcc09-size09`.
+Existing `as09`, `sim6809` and other toolchains are preserved. Installation
+stops if one of the new command names belongs to another installation; move
+that conflicting command aside deliberately or use a separate prefix.
+
+The compiler, target libraries, manuals and source use a versioned install
+layout. No Launcher menu or task is added. No reboot, reflash or new SD image
+is required. Failed fixes are not marked complete; retry through the same
+update action after correcting the reported error.
+[Terminal example](https://coco-pi.net/docs/coco-pi/user-guide#use-bcc09-in-a-terminal).
+
 ## 2026111102 — YA-DOS ROM correction — 2026-11-11
 
 Run **Apply CoCo-Pi Fixes**. The initial CHDX update requested

@@ -33,6 +33,14 @@ automatically rebuild installed compilers; see [CHANGELOG.md](CHANGELOG.md).
 Raspberry Pi OS updates remain separate: `sudo apt update` and
 `sudo apt full-upgrade`. Save work and reboot when an OS update requires it.
 
+## bcc09 in a terminal
+
+Run **Apply CoCo-Pi Fixes** to install bcc09, then use `bcc09` from a terminal
+or VS Code's integrated terminal. Its companion utilities have `bcc09-`
+prefixes, preserving existing assembler and simulator commands. This adds no
+Launcher menu or VS Code task. See the [terminal example](https://coco-pi.net/docs/coco-pi/user-guide#use-bcc09-in-a-terminal)
+and [release notes](CHANGELOG.md).
+
 ## Recover an older update entry point
 
 For a supported 64-bit Raspberry Pi CoCo-Pi image, save your work, open a terminal,

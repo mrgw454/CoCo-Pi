@@ -1,22 +1,21 @@
 {
   "schema": 1,
-  "sequence": 2026111102,
-  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-11 YA-DOS ROM correction)",
+  "sequence": 2026111103,
+  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-11 bcc09 terminal tools)",
   "launcher_revision": "47d16badc1c5eeb1ac8b6c46d72d01b51b0026ee",
   "update_repository": "https://github.com/mrgw454/CoCo-Pi",
   "update_branch": "main",
   "payloads": {
-    "scripts.tar.gz": "5e2acd4f4f9b5c967ef6e81a4967ece2826016b2f66e2cffdf4979b84801e2ae",
-    "source.tar.gz": "afb64ffdd570896fb90da33fab66db8acb2e41c521a42d7388496f8791dccb4f"
+    "scripts.tar.gz": "0d0283e039f538a47ecc1db196511aaf3f350efb0c8791e36c75cd6fba4a08c2",
+    "source.tar.gz": "98b397aad707ea8274da234236bb5029868bb44c8eccd5e5fd500660b3b91be1"
   },
   "downloads": {
-    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111102/scripts.tar.gz",
-    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111102/source.tar.gz"
+    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111103/scripts.tar.gz",
+    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111103/source.tar.gz"
   },
   "changes": [
-    "Correct the missing yados-0.5d.rom dependency in the initial CHDX update. The updated optional ROM archive includes verified YA-DOS 0.5D.",
-    "Apply CoCo-Pi Fixes adds fix-20261111-01: migrate the shipped ROM download setting and install only missing YA-DOS 0.5D when ROMs were already downloaded. Existing ROMs and custom settings are preserved.",
-    "Future Download ROMs includes 0.5D; Update CHDX HDD also prepares it. No HDD redownload, MPI change, reboot or SD-card reflash is required."
+    "Add pinned bcc09 0.11.0 for terminal use through fix-20261111-02. Companion commands use the bcc09- prefix, preserving existing as09, sim6809 and other toolchains.",
+    "No Launcher menu changes, new SD image, reboot or reflash. Build/install runs regression checks and retains a versioned compiler payload and manuals."
   ],
   "fixes": [
     {
@@ -48,6 +47,12 @@
       "description": "Add verified YA-DOS 0.5D for CHDX; update the shipped ROM download setting and preserve existing ROMs. No reboot needed.",
       "script": "scripts/cocopi-fixes/prepare-yados-rom.sh",
       "sha256": "2c76f87601fe1b70e80b4d32192a2b4224904987ecbc97701dd701bd519b0bc5"
+    },
+    {
+      "id": "fix-20261111-02",
+      "description": "Build/install bcc09 0.11.0 for terminal use; use bcc09-prefixed companion tools and preserve existing as09 and sim6809.",
+      "script": "scripts/cocopi-fixes/install-bcc09.sh",
+      "sha256": "8763ce26448aa0b9e5ccfb0d33dbec06aaf3a7804877cd6c448a0dd010160486"
     }
   ]
 }
