@@ -1,22 +1,21 @@
 {
   "schema": 1,
-  "sequence": 2026111301,
-  "name": "CoCo-Pi hosted NitrOS-9 EOU update (2026-11-13)",
-  "launcher_revision": "f7eee0b2720b72707f9687107d9232212b608ace",
+  "sequence": 2026111401,
+  "name": "CoCo-Pi Raspberry Pi Launcher refresh (2026-11-14)",
+  "launcher_revision": "928d0951c20b61b6635b8bbac473f678c43efe68",
   "update_repository": "https://github.com/mrgw454/CoCo-Pi",
   "update_branch": "main",
   "payloads": {
-    "scripts.tar.gz": "e69d2294ab4b7c54a334ff04b0478c0cb65d5b3ab94afc708709829854a18c6e",
-    "source.tar.gz": "daaae689335cfc5e4e3d6eac0eb3a148ba0971fa7f799d6c15381bf4b5a380b9"
+    "scripts.tar.gz": "b65dcb15c1c4521ad3f3c1c5d776277dddc6a545d9c45f270f5ff737f3f653fd",
+    "source.tar.gz": "5c66c504f7d3e4544bb64f36213c931c57334f0c5dd110465138ddeabdadf4a2"
   },
   "downloads": {
-    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111301/e69d2294ab4b7c54a334ff04b0478c0cb65d5b3ab94afc708709829854a18c6e/scripts.tar.gz",
-    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111301/daaae689335cfc5e4e3d6eac0eb3a148ba0971fa7f799d6c15381bf4b5a380b9/source.tar.gz"
+    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111401/b65dcb15c1c4521ad3f3c1c5d776277dddc6a545d9c45f270f5ff737f3f653fd/scripts.tar.gz",
+    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111401/5c66c504f7d3e4544bb64f36213c931c57334f0c5dd110465138ddeabdadf4a2/source.tar.gz"
   },
   "changes": [
-    "Replace Linux MAME/XRoar EOU choices with local 6309/2MB boot, optional isolated DriveWire disks/time, manual GShell and outgoing SuperComm.",
-    "Prepare new owner-media copies; preserve originals, ROMs and existing multi-USB pyDriveWire configuration. No emulator replacement, reboot, reflash or new SD image.",
-    "Optional incoming Telnet capability is manual; repeated disconnect/reconnect remains unsupported. Native Windows11 refresh is separately deferred."
+    "Refresh the Raspberry Pi Launcher with matching CoCo3 EOU menu labels and current shared launch/cleanup helpers.",
+    "Preserve existing prepared EOU media, optional emulator preferences and USB DriveWire configuration; no new media preparation, numbered fix, reboot or SD image is required."
   ],
   "fixes": [
     {

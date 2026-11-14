@@ -33,6 +33,10 @@ automatically rebuild installed compilers; see [CHANGELOG.md](CHANGELOG.md).
 Raspberry Pi OS updates remain separate: `sudo apt update` and
 `sudo apt full-upgrade`. Save work and reboot when an OS update requires it.
 
+**Current SD-distro update:2026111401.** Refreshes shared Launcher helpers and
+EOU menu labels; prepared media and display preferences are preserved. No new
+numbered fix or SD image. See [release notes](CHANGELOG.md).
+
 ## NitrOS-9 EOU
 
 Run **Apply CoCo-Pi Fixes** for the refreshed Linux MAME/XRoar EOU entries.

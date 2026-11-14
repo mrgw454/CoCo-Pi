@@ -1,5 +1,19 @@
 # CoCo-Pi updates
 
+## 2026111401 — Raspberry Pi Launcher refresh — 2026-11-14
+
+Choose **Update CoCo-Pi Launcher and Build Scripts**, then close and reopen
+Launcher. The shared helpers and guide are refreshed; both CoCo3 EOU choices
+now use **Tandy Color Computer 3 NitrOS-9 EOU w/6309,2MB**. Existing prepared
+EOU media, optional emulator display settings and USB DriveWire configuration
+are preserved. **Apply CoCo-Pi Fixes** also installs this release and any earlier
+missing fixes. This release adds no new numbered fix. No new SD image, media
+reset, reflash, reboot or emulator rebuild is required.
+
+This repository and its release channel are for the Raspberry Pi SD distro.
+The separate component Installer has its own packages and platform instructions.
+[EOU guide](https://coco-pi.net/docs/coco-pi/nitros9-eou).
+
 ## 2026111301 — NitrOS-9 EOU for MAME and XRoar — 2026-11-13
 
 Run **Apply CoCo-Pi Fixes**, then reopen the Launcher. The existing Linux
@@ -10,8 +24,8 @@ download EOU and select **Prepare NitrOS-9 EOU (MAME/XRoar)** afterward.
 
 Original media and your existing USB pyDriveWire configuration are preserved.
 Ordinary MAME, XRoar and XRoar-AI need no custom builds. Optional incoming
-Telnet is manual; repeated reconnect is unsupported. Refreshed Windows profiles
-are deferred. No reboot, reflash or new SD image is required.
+Telnet is manual; repeated reconnect is unsupported. No reboot, reflash or new
+SD image is required.
 [Preparation, server settings and limitations](https://coco-pi.net/docs/coco-pi/nitros9-eou).
 
 ## 2026111103 — bcc09 terminal development tools — 2026-11-11
