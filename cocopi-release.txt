@@ -1,1 +1,1 @@
-CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-11 bcc09 terminal tools)
+CoCo-Pi hosted NitrOS-9 EOU update (2026-11-13)

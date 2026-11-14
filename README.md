@@ -33,6 +33,14 @@ automatically rebuild installed compilers; see [CHANGELOG.md](CHANGELOG.md).
 Raspberry Pi OS updates remain separate: `sudo apt update` and
 `sudo apt full-upgrade`. Save work and reboot when an OS update requires it.
 
+## NitrOS-9 EOU
+
+Run **Apply CoCo-Pi Fixes** for the refreshed Linux MAME/XRoar EOU entries.
+Optional EOU media and ROMs remain separate downloads. See the
+[EOU guide](https://coco-pi.net/docs/coco-pi/nitros9-eou) for preparation,
+DriveWire settings, outgoing sessions and incoming Telnet limitations.
+No new SD image is needed.
+
 ## bcc09 in a terminal
 
 Run **Apply CoCo-Pi Fixes** to install bcc09, then use `bcc09` from a terminal

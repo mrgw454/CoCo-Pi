@@ -1,21 +1,22 @@
 {
   "schema": 1,
-  "sequence": 2026111103,
-  "name": "CoCo-Pi - Community Edition 2026.11 RC6 (2026-11-11 bcc09 terminal tools)",
-  "launcher_revision": "47d16badc1c5eeb1ac8b6c46d72d01b51b0026ee",
+  "sequence": 2026111301,
+  "name": "CoCo-Pi hosted NitrOS-9 EOU update (2026-11-13)",
+  "launcher_revision": "f7eee0b2720b72707f9687107d9232212b608ace",
   "update_repository": "https://github.com/mrgw454/CoCo-Pi",
   "update_branch": "main",
   "payloads": {
-    "scripts.tar.gz": "0d0283e039f538a47ecc1db196511aaf3f350efb0c8791e36c75cd6fba4a08c2",
-    "source.tar.gz": "98b397aad707ea8274da234236bb5029868bb44c8eccd5e5fd500660b3b91be1"
+    "scripts.tar.gz": "e69d2294ab4b7c54a334ff04b0478c0cb65d5b3ab94afc708709829854a18c6e",
+    "source.tar.gz": "daaae689335cfc5e4e3d6eac0eb3a148ba0971fa7f799d6c15381bf4b5a380b9"
   },
   "downloads": {
-    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111103/scripts.tar.gz",
-    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111103/source.tar.gz"
+    "scripts.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111301/e69d2294ab4b7c54a334ff04b0478c0cb65d5b3ab94afc708709829854a18c6e/scripts.tar.gz",
+    "source.tar.gz": "https://downloads.coco-pi.net/coco-pi/updates/2026111301/daaae689335cfc5e4e3d6eac0eb3a148ba0971fa7f799d6c15381bf4b5a380b9/source.tar.gz"
   },
   "changes": [
-    "Add pinned bcc09 0.11.0 for terminal use through fix-20261111-02. Companion commands use the bcc09- prefix, preserving existing as09, sim6809 and other toolchains.",
-    "No Launcher menu changes, new SD image, reboot or reflash. Build/install runs regression checks and retains a versioned compiler payload and manuals."
+    "Replace Linux MAME/XRoar EOU choices with local 6309/2MB boot, optional isolated DriveWire disks/time, manual GShell and outgoing SuperComm.",
+    "Prepare new owner-media copies; preserve originals, ROMs and existing multi-USB pyDriveWire configuration. No emulator replacement, reboot, reflash or new SD image.",
+    "Optional incoming Telnet capability is manual; repeated disconnect/reconnect remains unsupported. Native Windows11 refresh is separately deferred."
   ],
   "fixes": [
     {
@@ -53,6 +54,12 @@
       "description": "Build/install bcc09 0.11.0 for terminal use; use bcc09-prefixed companion tools and preserve existing as09 and sim6809.",
       "script": "scripts/cocopi-fixes/install-bcc09.sh",
       "sha256": "8763ce26448aa0b9e5ccfb0d33dbec06aaf3a7804877cd6c448a0dd010160486"
+    },
+    {
+      "id": "fix-20261113-01",
+      "description": "Refresh hosted NitrOS-9 EOU profiles and prepare new media when owner downloads are present; preserve originals and serial-server configuration. No reboot/reflash or emulator replacement.",
+      "script": "scripts/cocopi-fixes/prepare-eou.sh",
+      "sha256": "c5c7f0c8018961ce0237ef159f720f4126581e3f4876d636f0e933d7ac71ba93"
     }
   ]
 }

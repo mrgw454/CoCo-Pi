@@ -1,5 +1,19 @@
 # CoCo-Pi updates
 
+## 2026111301 — NitrOS-9 EOU for MAME and XRoar — 2026-11-13
+
+Run **Apply CoCo-Pi Fixes**, then reopen the Launcher. The existing Linux
+EOU choices now boot a local 6309/2MB system with optional DriveWire disks and
+time, manual GShell and outgoing SuperComm. Fix `fix-20261113-01` prepares
+separate writable copies when the optional 6309 EOU media is present; otherwise
+download EOU and select **Prepare NitrOS-9 EOU (MAME/XRoar)** afterward.
+
+Original media and your existing USB pyDriveWire configuration are preserved.
+Ordinary MAME, XRoar and XRoar-AI need no custom builds. Optional incoming
+Telnet is manual; repeated reconnect is unsupported. Refreshed Windows profiles
+are deferred. No reboot, reflash or new SD image is required.
+[Preparation, server settings and limitations](https://coco-pi.net/docs/coco-pi/nitros9-eou).
+
 ## 2026111103 — bcc09 terminal development tools — 2026-11-11
 
 Run **Apply CoCo-Pi Fixes** to install John Linville's bcc09 0.11.0 through
